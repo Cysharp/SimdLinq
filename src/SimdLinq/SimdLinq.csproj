@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Update="SimdLinqExtensions.Contains.tt">
+          <LastGenOutput>SimdLinqExtensions.Contains.cs</LastGenOutput>
+          <Generator>TextTemplatingFileGenerator</Generator>
+        </None>
+        <None Update="SimdLinqExtensions.SequenceEqual.tt">
+          <LastGenOutput>SimdLinqExtensions.SequenceEqual.cs</LastGenOutput>
+          <Generator>TextTemplatingFileGenerator</Generator>
+        </None>
+        <None Update="SimdLinqExtensions.MinMax.tt">
+          <Generator>TextTemplatingFileGenerator</Generator>
+          <LastGenOutput>SimdLinqExtensions.MinMax.cs</LastGenOutput>
+        </None>
+        <None Update="SimdLinqExtensions.SumAverage.tt">
+            <Generator>TextTemplatingFileGenerator</Generator>
+            <LastGenOutput>SimdLinqExtensions.SumAverage.cs</LastGenOutput>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Update="SimdLinqExtensions.Contains.cs">
+          <DependentUpon>SimdLinqExtensions.Contains.tt</DependentUpon>
+          <DesignTime>True</DesignTime>
+          <AutoGen>True</AutoGen>
+        </Compile>
+        <Compile Update="SimdLinqExtensions.SequenceEqual.cs">
+          <DependentUpon>SimdLinqExtensions.SequenceEqual.tt</DependentUpon>
+          <DesignTime>True</DesignTime>
+          <AutoGen>True</AutoGen>
+        </Compile>
+        <Compile Update="SimdLinqExtensions.MinMax.cs">
+          <DesignTime>True</DesignTime>
+          <AutoGen>True</AutoGen>
+          <DependentUpon>SimdLinqExtensions.MinMax.tt</DependentUpon>
+        </Compile>
+        <Compile Update="SimdLinqExtensions.SumAverage.cs">
+          <DesignTime>True</DesignTime>
+          <AutoGen>True</AutoGen>
+          <DependentUpon>SimdLinqExtensions.SumAverage.tt</DependentUpon>
+        </Compile>
+    </ItemGroup>
+
+</Project>
