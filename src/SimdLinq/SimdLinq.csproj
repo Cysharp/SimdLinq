@@ -5,8 +5,15 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <NoWarn>$(NoWarn);CS1591;CA2255</NoWarn>
+        <PackageTags>linq</PackageTags>
+        <Description>Drop-in replacement of LINQ aggregation operations extremely faster with SIMD.</Description>
     </PropertyGroup>
 
+    <ItemGroup>
+        <None Include="../../Icon.png" Pack="true" PackagePath="/" />
+    </ItemGroup>
+    
     <ItemGroup>
         <None Update="SimdLinqExtensions.Contains.tt">
           <LastGenOutput>SimdLinqExtensions.Contains.cs</LastGenOutput>
