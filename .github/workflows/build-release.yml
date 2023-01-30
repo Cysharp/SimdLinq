@@ -14,14 +14,10 @@ on:
 
 jobs:
   build-dotnet:
-    needs: [update-packagejson]
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - run: echo ${{ needs.update-packagejson.outputs.sha }}
       - uses: actions/checkout@v3
-        with:
-          ref: ${{ needs.update-packagejson.outputs.sha }}
       - uses: Cysharp/Actions/.github/actions/setup-dotnet@main
         with:
           dotnet-version: |
@@ -37,7 +33,7 @@ jobs:
 
   # release
   create-release:
-    needs: [update-packagejson, build-dotnet, build-unity]
+    needs: [build-dotnet]
     uses: Cysharp/Actions/.github/workflows/create-release.yaml@main
     with:
       dry-run: ${{ inputs.dry-run }}
