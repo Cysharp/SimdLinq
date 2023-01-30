@@ -9,6 +9,7 @@ using SimdLinq;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
+using System.Reflection;
 
 var config = ManualConfig.CreateMinimumViable()
     .AddDiagnoser(MemoryDiagnoser.Default)
@@ -17,14 +18,20 @@ var config = ManualConfig.CreateMinimumViable()
 
 #if !DEBUG
 
+
+
 // BenchmarkRunner.Run<IntSumBenchmark>(config, args);
 //BenchmarkRunner.Run<IntMinBenchmark>(config, args);
 //BenchmarkRunner.Run<LongMinBenchmark>(config, args);
 //BenchmarkRunner.Run<DoubleMinBenchmark>(config, args);
-BenchmarkRunner.Run<IntContainsBenchmark>(config, args);
+//BenchmarkRunner.Run<IntContainsBenchmark>(config, args);
+
+BenchmarkSwitcher.FromAssembly(Assembly.GetEntryAssembly()!).RunAllJoined(config);
 
 #else
 
+
+System.Linq.Enumerable.Min(Array.Empty<int>());
 //_ = new IntMinBenchmark().SimdLinq();
 
 #endif
@@ -299,4 +306,6 @@ public class IntContainsBenchmark
     {
         return source.AsValueEnumerable().Contains(target);
     }
+
+
 }

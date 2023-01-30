@@ -242,6 +242,6 @@ public static partial class SimdLinqExtensions
     [DoesNotReturn]
     static void ThrowNoElements()
     {
-        throw new Exception(); // TODO: throw no elements...
+        throw new InvalidOperationException("Sequence contains no elements");
     }
 }
