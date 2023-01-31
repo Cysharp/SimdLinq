@@ -1,7 +1,7 @@
 # SimdLinq
 [![GitHub Actions](https://github.com/Cysharp/SimdLinq/workflows/Build-Debug/badge.svg)](https://github.com/Cysharp/SimdLinq/actions) [![Releases](https://img.shields.io/github/release/Cysharp/SimdLinq.svg)](https://github.com/Cysharp/SimdLinq/releases)
 
-SimdLinq is a high performance, drop-in replacement for LINQ aggregation operations (`Sum`, `Average`, `Min`, `Max`).
+SimdLinq is a drop-in replacement of LINQ aggregation operations(`Sum`, `Average`, `Min`, `Max`) extremely faster with SIMD.
 
 ![image](https://user-images.githubusercontent.com/46207/215410106-b68d8567-5abf-4aa4-a050-a803b1913187.png)
 
