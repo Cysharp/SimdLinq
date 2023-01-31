@@ -22,12 +22,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Contains in SIMD.</summary>
     <#= signature #>(this <#= type #>[] source, <#= type #> value)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return ContainsCore(new ReadOnlySpan<<#= type #>>(source), value);
     }
 
     /// <summary>Compute Contains in SIMD.</summary>
     <#= signature #>(this List<<#= type #>> source, <#= type #> value)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return ContainsCore((ReadOnlySpan<<#= type #>>)CollectionsMarshal.AsSpan(source), value);
     }
 

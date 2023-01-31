@@ -7,12 +7,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Sum in SIMD.</summary>
     public static int Sum(this int[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return SumCore(new ReadOnlySpan<int>(source));
     }
 
     /// <summary>Compute Sum in SIMD.</summary>
     public static int Sum(this List<int> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return SumCore((ReadOnlySpan<int>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -43,12 +45,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Sum in SIMD.</summary>
     public static long Sum(this long[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return SumCore(new ReadOnlySpan<long>(source));
     }
 
     /// <summary>Compute Sum in SIMD.</summary>
     public static long Sum(this List<long> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return SumCore((ReadOnlySpan<long>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -79,12 +83,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Sum in SIMD.</summary>
     public static double Sum(this double[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return SumCore(new ReadOnlySpan<double>(source));
     }
 
     /// <summary>Compute Sum in SIMD.</summary>
     public static double Sum(this List<double> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return SumCore((ReadOnlySpan<double>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -115,12 +121,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Sum in SIMD.</summary>
     public static float Sum(this float[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return SumCore(new ReadOnlySpan<float>(source));
     }
 
     /// <summary>Compute Sum in SIMD.</summary>
     public static float Sum(this List<float> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return SumCore((ReadOnlySpan<float>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -151,12 +159,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Sum in SIMD.</summary>
     public static uint Sum(this uint[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return SumCore(new ReadOnlySpan<uint>(source));
     }
 
     /// <summary>Compute Sum in SIMD.</summary>
     public static uint Sum(this List<uint> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return SumCore((ReadOnlySpan<uint>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -187,12 +197,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Sum in SIMD.</summary>
     public static ulong Sum(this ulong[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return SumCore(new ReadOnlySpan<ulong>(source));
     }
 
     /// <summary>Compute Sum in SIMD.</summary>
     public static ulong Sum(this List<ulong> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return SumCore((ReadOnlySpan<ulong>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -228,12 +240,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Average in SIMD.</summary>
     public static double Average(this int[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return AverageCore(new ReadOnlySpan<int>(source));
     }
 
     /// <summary>Compute Average in SIMD.</summary>
     public static double Average(this List<int> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return AverageCore((ReadOnlySpan<int>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -264,12 +278,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Average in SIMD.</summary>
     public static double Average(this long[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return AverageCore(new ReadOnlySpan<long>(source));
     }
 
     /// <summary>Compute Average in SIMD.</summary>
     public static double Average(this List<long> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return AverageCore((ReadOnlySpan<long>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -300,12 +316,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Average in SIMD.</summary>
     public static double Average(this double[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return AverageCore(new ReadOnlySpan<double>(source));
     }
 
     /// <summary>Compute Average in SIMD.</summary>
     public static double Average(this List<double> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return AverageCore((ReadOnlySpan<double>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -336,12 +354,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Average in SIMD.</summary>
     public static float Average(this float[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return AverageCore(new ReadOnlySpan<float>(source));
     }
 
     /// <summary>Compute Average in SIMD.</summary>
     public static float Average(this List<float> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return AverageCore((ReadOnlySpan<float>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -372,12 +392,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Average in SIMD.</summary>
     public static double Average(this uint[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return AverageCore(new ReadOnlySpan<uint>(source));
     }
 
     /// <summary>Compute Average in SIMD.</summary>
     public static double Average(this List<uint> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return AverageCore((ReadOnlySpan<uint>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -408,12 +430,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Average in SIMD.</summary>
     public static double Average(this ulong[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return AverageCore(new ReadOnlySpan<ulong>(source));
     }
 
     /// <summary>Compute Average in SIMD.</summary>
     public static double Average(this List<ulong> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return AverageCore((ReadOnlySpan<ulong>)CollectionsMarshal.AsSpan(source));
     }
 

@@ -22,21 +22,27 @@ public static partial class SimdLinqExtensions
 <# foreach(var type in types) { #>
     <#= signature #>(<#= type #>[] first, <#= type #>[] second)
     {
+        ArgumentNullException.ThrowIfNull(first);
+        ArgumentNullException.ThrowIfNull(second);
         return MemoryExtensions.SequenceEqual(first.AsSpan(), second.AsSpan());
     }
 
     <#= signature #>(<#= type #>[] first, ReadOnlySpan<<#= type #>> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
         return MemoryExtensions.SequenceEqual(first.AsSpan(), second);
     }
 
     <#= signature #>(List<<#= type #>> first, List<<#= type #>> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
+        ArgumentNullException.ThrowIfNull(second);
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<<#= type #>>)CollectionsMarshal.AsSpan(first), (ReadOnlySpan<<#= type #>>)CollectionsMarshal.AsSpan(second));
     }
 
     <#= signature #>(List<<#= type #>> first, ReadOnlySpan<<#= type #>> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<<#= type #>>)CollectionsMarshal.AsSpan(first), second);
     }
 

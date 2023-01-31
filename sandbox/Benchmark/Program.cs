@@ -30,8 +30,8 @@ BenchmarkSwitcher.FromAssembly(Assembly.GetEntryAssembly()!).RunAllJoined(config
 
 #else
 
-
-System.Linq.Enumerable.Min(Array.Empty<int>());
+// _= Enumerable.Max((int[])null!);
+//System.Linq.Enumerable.Min(Array.Empty<int>());
 //_ = new IntMinBenchmark().SimdLinq();
 
 #endif

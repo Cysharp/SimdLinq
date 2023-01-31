@@ -8,21 +8,27 @@ public static partial class SimdLinqExtensions
 {
     public static bool SequenceEqual(byte[] first, byte[] second)
     {
+        ArgumentNullException.ThrowIfNull(first);
+        ArgumentNullException.ThrowIfNull(second);
         return MemoryExtensions.SequenceEqual(first.AsSpan(), second.AsSpan());
     }
 
     public static bool SequenceEqual(byte[] first, ReadOnlySpan<byte> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
         return MemoryExtensions.SequenceEqual(first.AsSpan(), second);
     }
 
     public static bool SequenceEqual(List<byte> first, List<byte> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
+        ArgumentNullException.ThrowIfNull(second);
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<byte>)CollectionsMarshal.AsSpan(first), (ReadOnlySpan<byte>)CollectionsMarshal.AsSpan(second));
     }
 
     public static bool SequenceEqual(List<byte> first, ReadOnlySpan<byte> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<byte>)CollectionsMarshal.AsSpan(first), second);
     }
 
@@ -58,21 +64,27 @@ public static partial class SimdLinqExtensions
 
     public static bool SequenceEqual(sbyte[] first, sbyte[] second)
     {
+        ArgumentNullException.ThrowIfNull(first);
+        ArgumentNullException.ThrowIfNull(second);
         return MemoryExtensions.SequenceEqual(first.AsSpan(), second.AsSpan());
     }
 
     public static bool SequenceEqual(sbyte[] first, ReadOnlySpan<sbyte> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
         return MemoryExtensions.SequenceEqual(first.AsSpan(), second);
     }
 
     public static bool SequenceEqual(List<sbyte> first, List<sbyte> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
+        ArgumentNullException.ThrowIfNull(second);
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<sbyte>)CollectionsMarshal.AsSpan(first), (ReadOnlySpan<sbyte>)CollectionsMarshal.AsSpan(second));
     }
 
     public static bool SequenceEqual(List<sbyte> first, ReadOnlySpan<sbyte> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<sbyte>)CollectionsMarshal.AsSpan(first), second);
     }
 
@@ -108,21 +120,27 @@ public static partial class SimdLinqExtensions
 
     public static bool SequenceEqual(short[] first, short[] second)
     {
+        ArgumentNullException.ThrowIfNull(first);
+        ArgumentNullException.ThrowIfNull(second);
         return MemoryExtensions.SequenceEqual(first.AsSpan(), second.AsSpan());
     }
 
     public static bool SequenceEqual(short[] first, ReadOnlySpan<short> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
         return MemoryExtensions.SequenceEqual(first.AsSpan(), second);
     }
 
     public static bool SequenceEqual(List<short> first, List<short> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
+        ArgumentNullException.ThrowIfNull(second);
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<short>)CollectionsMarshal.AsSpan(first), (ReadOnlySpan<short>)CollectionsMarshal.AsSpan(second));
     }
 
     public static bool SequenceEqual(List<short> first, ReadOnlySpan<short> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<short>)CollectionsMarshal.AsSpan(first), second);
     }
 
@@ -158,21 +176,27 @@ public static partial class SimdLinqExtensions
 
     public static bool SequenceEqual(ushort[] first, ushort[] second)
     {
+        ArgumentNullException.ThrowIfNull(first);
+        ArgumentNullException.ThrowIfNull(second);
         return MemoryExtensions.SequenceEqual(first.AsSpan(), second.AsSpan());
     }
 
     public static bool SequenceEqual(ushort[] first, ReadOnlySpan<ushort> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
         return MemoryExtensions.SequenceEqual(first.AsSpan(), second);
     }
 
     public static bool SequenceEqual(List<ushort> first, List<ushort> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
+        ArgumentNullException.ThrowIfNull(second);
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<ushort>)CollectionsMarshal.AsSpan(first), (ReadOnlySpan<ushort>)CollectionsMarshal.AsSpan(second));
     }
 
     public static bool SequenceEqual(List<ushort> first, ReadOnlySpan<ushort> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<ushort>)CollectionsMarshal.AsSpan(first), second);
     }
 
@@ -208,21 +232,27 @@ public static partial class SimdLinqExtensions
 
     public static bool SequenceEqual(int[] first, int[] second)
     {
+        ArgumentNullException.ThrowIfNull(first);
+        ArgumentNullException.ThrowIfNull(second);
         return MemoryExtensions.SequenceEqual(first.AsSpan(), second.AsSpan());
     }
 
     public static bool SequenceEqual(int[] first, ReadOnlySpan<int> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
         return MemoryExtensions.SequenceEqual(first.AsSpan(), second);
     }
 
     public static bool SequenceEqual(List<int> first, List<int> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
+        ArgumentNullException.ThrowIfNull(second);
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<int>)CollectionsMarshal.AsSpan(first), (ReadOnlySpan<int>)CollectionsMarshal.AsSpan(second));
     }
 
     public static bool SequenceEqual(List<int> first, ReadOnlySpan<int> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<int>)CollectionsMarshal.AsSpan(first), second);
     }
 
@@ -258,21 +288,27 @@ public static partial class SimdLinqExtensions
 
     public static bool SequenceEqual(uint[] first, uint[] second)
     {
+        ArgumentNullException.ThrowIfNull(first);
+        ArgumentNullException.ThrowIfNull(second);
         return MemoryExtensions.SequenceEqual(first.AsSpan(), second.AsSpan());
     }
 
     public static bool SequenceEqual(uint[] first, ReadOnlySpan<uint> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
         return MemoryExtensions.SequenceEqual(first.AsSpan(), second);
     }
 
     public static bool SequenceEqual(List<uint> first, List<uint> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
+        ArgumentNullException.ThrowIfNull(second);
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<uint>)CollectionsMarshal.AsSpan(first), (ReadOnlySpan<uint>)CollectionsMarshal.AsSpan(second));
     }
 
     public static bool SequenceEqual(List<uint> first, ReadOnlySpan<uint> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<uint>)CollectionsMarshal.AsSpan(first), second);
     }
 
@@ -308,21 +344,27 @@ public static partial class SimdLinqExtensions
 
     public static bool SequenceEqual(long[] first, long[] second)
     {
+        ArgumentNullException.ThrowIfNull(first);
+        ArgumentNullException.ThrowIfNull(second);
         return MemoryExtensions.SequenceEqual(first.AsSpan(), second.AsSpan());
     }
 
     public static bool SequenceEqual(long[] first, ReadOnlySpan<long> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
         return MemoryExtensions.SequenceEqual(first.AsSpan(), second);
     }
 
     public static bool SequenceEqual(List<long> first, List<long> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
+        ArgumentNullException.ThrowIfNull(second);
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<long>)CollectionsMarshal.AsSpan(first), (ReadOnlySpan<long>)CollectionsMarshal.AsSpan(second));
     }
 
     public static bool SequenceEqual(List<long> first, ReadOnlySpan<long> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<long>)CollectionsMarshal.AsSpan(first), second);
     }
 
@@ -358,21 +400,27 @@ public static partial class SimdLinqExtensions
 
     public static bool SequenceEqual(ulong[] first, ulong[] second)
     {
+        ArgumentNullException.ThrowIfNull(first);
+        ArgumentNullException.ThrowIfNull(second);
         return MemoryExtensions.SequenceEqual(first.AsSpan(), second.AsSpan());
     }
 
     public static bool SequenceEqual(ulong[] first, ReadOnlySpan<ulong> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
         return MemoryExtensions.SequenceEqual(first.AsSpan(), second);
     }
 
     public static bool SequenceEqual(List<ulong> first, List<ulong> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
+        ArgumentNullException.ThrowIfNull(second);
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<ulong>)CollectionsMarshal.AsSpan(first), (ReadOnlySpan<ulong>)CollectionsMarshal.AsSpan(second));
     }
 
     public static bool SequenceEqual(List<ulong> first, ReadOnlySpan<ulong> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<ulong>)CollectionsMarshal.AsSpan(first), second);
     }
 
@@ -408,21 +456,27 @@ public static partial class SimdLinqExtensions
 
     public static bool SequenceEqual(float[] first, float[] second)
     {
+        ArgumentNullException.ThrowIfNull(first);
+        ArgumentNullException.ThrowIfNull(second);
         return MemoryExtensions.SequenceEqual(first.AsSpan(), second.AsSpan());
     }
 
     public static bool SequenceEqual(float[] first, ReadOnlySpan<float> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
         return MemoryExtensions.SequenceEqual(first.AsSpan(), second);
     }
 
     public static bool SequenceEqual(List<float> first, List<float> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
+        ArgumentNullException.ThrowIfNull(second);
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<float>)CollectionsMarshal.AsSpan(first), (ReadOnlySpan<float>)CollectionsMarshal.AsSpan(second));
     }
 
     public static bool SequenceEqual(List<float> first, ReadOnlySpan<float> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<float>)CollectionsMarshal.AsSpan(first), second);
     }
 
@@ -458,21 +512,27 @@ public static partial class SimdLinqExtensions
 
     public static bool SequenceEqual(double[] first, double[] second)
     {
+        ArgumentNullException.ThrowIfNull(first);
+        ArgumentNullException.ThrowIfNull(second);
         return MemoryExtensions.SequenceEqual(first.AsSpan(), second.AsSpan());
     }
 
     public static bool SequenceEqual(double[] first, ReadOnlySpan<double> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
         return MemoryExtensions.SequenceEqual(first.AsSpan(), second);
     }
 
     public static bool SequenceEqual(List<double> first, List<double> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
+        ArgumentNullException.ThrowIfNull(second);
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<double>)CollectionsMarshal.AsSpan(first), (ReadOnlySpan<double>)CollectionsMarshal.AsSpan(second));
     }
 
     public static bool SequenceEqual(List<double> first, ReadOnlySpan<double> second)
     {
+        ArgumentNullException.ThrowIfNull(first);
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<double>)CollectionsMarshal.AsSpan(first), second);
     }
 

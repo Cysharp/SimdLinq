@@ -7,12 +7,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Min in SIMD.</summary>
     public static byte Min(this byte[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinCore(new ReadOnlySpan<byte>(source));
     }
 
     /// <summary>Compute Min in SIMD.</summary>
     public static byte Min(this List<byte> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinCore((ReadOnlySpan<byte>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -43,12 +45,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Min in SIMD.</summary>
     public static sbyte Min(this sbyte[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinCore(new ReadOnlySpan<sbyte>(source));
     }
 
     /// <summary>Compute Min in SIMD.</summary>
     public static sbyte Min(this List<sbyte> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinCore((ReadOnlySpan<sbyte>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -79,12 +83,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Min in SIMD.</summary>
     public static short Min(this short[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinCore(new ReadOnlySpan<short>(source));
     }
 
     /// <summary>Compute Min in SIMD.</summary>
     public static short Min(this List<short> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinCore((ReadOnlySpan<short>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -115,12 +121,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Min in SIMD.</summary>
     public static ushort Min(this ushort[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinCore(new ReadOnlySpan<ushort>(source));
     }
 
     /// <summary>Compute Min in SIMD.</summary>
     public static ushort Min(this List<ushort> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinCore((ReadOnlySpan<ushort>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -151,12 +159,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Min in SIMD.</summary>
     public static int Min(this int[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinCore(new ReadOnlySpan<int>(source));
     }
 
     /// <summary>Compute Min in SIMD.</summary>
     public static int Min(this List<int> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinCore((ReadOnlySpan<int>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -187,12 +197,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Min in SIMD.</summary>
     public static uint Min(this uint[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinCore(new ReadOnlySpan<uint>(source));
     }
 
     /// <summary>Compute Min in SIMD.</summary>
     public static uint Min(this List<uint> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinCore((ReadOnlySpan<uint>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -223,12 +235,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Min in SIMD.</summary>
     public static long Min(this long[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinCore(new ReadOnlySpan<long>(source));
     }
 
     /// <summary>Compute Min in SIMD.</summary>
     public static long Min(this List<long> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinCore((ReadOnlySpan<long>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -259,12 +273,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Min in SIMD.</summary>
     public static ulong Min(this ulong[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinCore(new ReadOnlySpan<ulong>(source));
     }
 
     /// <summary>Compute Min in SIMD.</summary>
     public static ulong Min(this List<ulong> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinCore((ReadOnlySpan<ulong>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -295,12 +311,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Min in SIMD.</summary>
     public static float Min(this float[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinCore(new ReadOnlySpan<float>(source));
     }
 
     /// <summary>Compute Min in SIMD.</summary>
     public static float Min(this List<float> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinCore((ReadOnlySpan<float>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -331,12 +349,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Min in SIMD.</summary>
     public static double Min(this double[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinCore(new ReadOnlySpan<double>(source));
     }
 
     /// <summary>Compute Min in SIMD.</summary>
     public static double Min(this List<double> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinCore((ReadOnlySpan<double>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -372,12 +392,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Max in SIMD.</summary>
     public static byte Max(this byte[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MaxCore(new ReadOnlySpan<byte>(source));
     }
 
     /// <summary>Compute Max in SIMD.</summary>
     public static byte Max(this List<byte> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MaxCore((ReadOnlySpan<byte>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -408,12 +430,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Max in SIMD.</summary>
     public static sbyte Max(this sbyte[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MaxCore(new ReadOnlySpan<sbyte>(source));
     }
 
     /// <summary>Compute Max in SIMD.</summary>
     public static sbyte Max(this List<sbyte> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MaxCore((ReadOnlySpan<sbyte>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -444,12 +468,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Max in SIMD.</summary>
     public static short Max(this short[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MaxCore(new ReadOnlySpan<short>(source));
     }
 
     /// <summary>Compute Max in SIMD.</summary>
     public static short Max(this List<short> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MaxCore((ReadOnlySpan<short>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -480,12 +506,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Max in SIMD.</summary>
     public static ushort Max(this ushort[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MaxCore(new ReadOnlySpan<ushort>(source));
     }
 
     /// <summary>Compute Max in SIMD.</summary>
     public static ushort Max(this List<ushort> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MaxCore((ReadOnlySpan<ushort>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -516,12 +544,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Max in SIMD.</summary>
     public static int Max(this int[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MaxCore(new ReadOnlySpan<int>(source));
     }
 
     /// <summary>Compute Max in SIMD.</summary>
     public static int Max(this List<int> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MaxCore((ReadOnlySpan<int>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -552,12 +582,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Max in SIMD.</summary>
     public static uint Max(this uint[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MaxCore(new ReadOnlySpan<uint>(source));
     }
 
     /// <summary>Compute Max in SIMD.</summary>
     public static uint Max(this List<uint> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MaxCore((ReadOnlySpan<uint>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -588,12 +620,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Max in SIMD.</summary>
     public static long Max(this long[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MaxCore(new ReadOnlySpan<long>(source));
     }
 
     /// <summary>Compute Max in SIMD.</summary>
     public static long Max(this List<long> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MaxCore((ReadOnlySpan<long>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -624,12 +658,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Max in SIMD.</summary>
     public static ulong Max(this ulong[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MaxCore(new ReadOnlySpan<ulong>(source));
     }
 
     /// <summary>Compute Max in SIMD.</summary>
     public static ulong Max(this List<ulong> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MaxCore((ReadOnlySpan<ulong>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -660,12 +696,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Max in SIMD.</summary>
     public static float Max(this float[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MaxCore(new ReadOnlySpan<float>(source));
     }
 
     /// <summary>Compute Max in SIMD.</summary>
     public static float Max(this List<float> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MaxCore((ReadOnlySpan<float>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -696,12 +734,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Max in SIMD.</summary>
     public static double Max(this double[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MaxCore(new ReadOnlySpan<double>(source));
     }
 
     /// <summary>Compute Max in SIMD.</summary>
     public static double Max(this List<double> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MaxCore((ReadOnlySpan<double>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -737,12 +777,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute MinMax in SIMD.</summary>
     public static (byte Min, byte Max) MinMax(this byte[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinMaxCore(new ReadOnlySpan<byte>(source));
     }
 
     /// <summary>Compute MinMax in SIMD.</summary>
     public static (byte Min, byte Max) MinMax(this List<byte> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinMaxCore((ReadOnlySpan<byte>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -773,12 +815,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute MinMax in SIMD.</summary>
     public static (sbyte Min, sbyte Max) MinMax(this sbyte[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinMaxCore(new ReadOnlySpan<sbyte>(source));
     }
 
     /// <summary>Compute MinMax in SIMD.</summary>
     public static (sbyte Min, sbyte Max) MinMax(this List<sbyte> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinMaxCore((ReadOnlySpan<sbyte>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -809,12 +853,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute MinMax in SIMD.</summary>
     public static (short Min, short Max) MinMax(this short[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinMaxCore(new ReadOnlySpan<short>(source));
     }
 
     /// <summary>Compute MinMax in SIMD.</summary>
     public static (short Min, short Max) MinMax(this List<short> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinMaxCore((ReadOnlySpan<short>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -845,12 +891,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute MinMax in SIMD.</summary>
     public static (ushort Min, ushort Max) MinMax(this ushort[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinMaxCore(new ReadOnlySpan<ushort>(source));
     }
 
     /// <summary>Compute MinMax in SIMD.</summary>
     public static (ushort Min, ushort Max) MinMax(this List<ushort> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinMaxCore((ReadOnlySpan<ushort>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -881,12 +929,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute MinMax in SIMD.</summary>
     public static (int Min, int Max) MinMax(this int[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinMaxCore(new ReadOnlySpan<int>(source));
     }
 
     /// <summary>Compute MinMax in SIMD.</summary>
     public static (int Min, int Max) MinMax(this List<int> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinMaxCore((ReadOnlySpan<int>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -917,12 +967,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute MinMax in SIMD.</summary>
     public static (uint Min, uint Max) MinMax(this uint[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinMaxCore(new ReadOnlySpan<uint>(source));
     }
 
     /// <summary>Compute MinMax in SIMD.</summary>
     public static (uint Min, uint Max) MinMax(this List<uint> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinMaxCore((ReadOnlySpan<uint>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -953,12 +1005,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute MinMax in SIMD.</summary>
     public static (long Min, long Max) MinMax(this long[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinMaxCore(new ReadOnlySpan<long>(source));
     }
 
     /// <summary>Compute MinMax in SIMD.</summary>
     public static (long Min, long Max) MinMax(this List<long> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinMaxCore((ReadOnlySpan<long>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -989,12 +1043,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute MinMax in SIMD.</summary>
     public static (ulong Min, ulong Max) MinMax(this ulong[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinMaxCore(new ReadOnlySpan<ulong>(source));
     }
 
     /// <summary>Compute MinMax in SIMD.</summary>
     public static (ulong Min, ulong Max) MinMax(this List<ulong> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinMaxCore((ReadOnlySpan<ulong>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -1025,12 +1081,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute MinMax in SIMD.</summary>
     public static (float Min, float Max) MinMax(this float[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinMaxCore(new ReadOnlySpan<float>(source));
     }
 
     /// <summary>Compute MinMax in SIMD.</summary>
     public static (float Min, float Max) MinMax(this List<float> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinMaxCore((ReadOnlySpan<float>)CollectionsMarshal.AsSpan(source));
     }
 
@@ -1061,12 +1119,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute MinMax in SIMD.</summary>
     public static (double Min, double Max) MinMax(this double[] source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinMaxCore(new ReadOnlySpan<double>(source));
     }
 
     /// <summary>Compute MinMax in SIMD.</summary>
     public static (double Min, double Max) MinMax(this List<double> source)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return MinMaxCore((ReadOnlySpan<double>)CollectionsMarshal.AsSpan(source));
     }
 

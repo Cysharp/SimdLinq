@@ -8,12 +8,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Contains in SIMD.</summary>
     public static unsafe bool Contains(this byte[] source, byte value)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return ContainsCore(new ReadOnlySpan<byte>(source), value);
     }
 
     /// <summary>Compute Contains in SIMD.</summary>
     public static unsafe bool Contains(this List<byte> source, byte value)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return ContainsCore((ReadOnlySpan<byte>)CollectionsMarshal.AsSpan(source), value);
     }
 
@@ -43,12 +45,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Contains in SIMD.</summary>
     public static unsafe bool Contains(this sbyte[] source, sbyte value)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return ContainsCore(new ReadOnlySpan<sbyte>(source), value);
     }
 
     /// <summary>Compute Contains in SIMD.</summary>
     public static unsafe bool Contains(this List<sbyte> source, sbyte value)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return ContainsCore((ReadOnlySpan<sbyte>)CollectionsMarshal.AsSpan(source), value);
     }
 
@@ -78,12 +82,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Contains in SIMD.</summary>
     public static unsafe bool Contains(this short[] source, short value)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return ContainsCore(new ReadOnlySpan<short>(source), value);
     }
 
     /// <summary>Compute Contains in SIMD.</summary>
     public static unsafe bool Contains(this List<short> source, short value)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return ContainsCore((ReadOnlySpan<short>)CollectionsMarshal.AsSpan(source), value);
     }
 
@@ -113,12 +119,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Contains in SIMD.</summary>
     public static unsafe bool Contains(this ushort[] source, ushort value)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return ContainsCore(new ReadOnlySpan<ushort>(source), value);
     }
 
     /// <summary>Compute Contains in SIMD.</summary>
     public static unsafe bool Contains(this List<ushort> source, ushort value)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return ContainsCore((ReadOnlySpan<ushort>)CollectionsMarshal.AsSpan(source), value);
     }
 
@@ -148,12 +156,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Contains in SIMD.</summary>
     public static unsafe bool Contains(this int[] source, int value)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return ContainsCore(new ReadOnlySpan<int>(source), value);
     }
 
     /// <summary>Compute Contains in SIMD.</summary>
     public static unsafe bool Contains(this List<int> source, int value)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return ContainsCore((ReadOnlySpan<int>)CollectionsMarshal.AsSpan(source), value);
     }
 
@@ -183,12 +193,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Contains in SIMD.</summary>
     public static unsafe bool Contains(this uint[] source, uint value)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return ContainsCore(new ReadOnlySpan<uint>(source), value);
     }
 
     /// <summary>Compute Contains in SIMD.</summary>
     public static unsafe bool Contains(this List<uint> source, uint value)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return ContainsCore((ReadOnlySpan<uint>)CollectionsMarshal.AsSpan(source), value);
     }
 
@@ -218,12 +230,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Contains in SIMD.</summary>
     public static unsafe bool Contains(this long[] source, long value)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return ContainsCore(new ReadOnlySpan<long>(source), value);
     }
 
     /// <summary>Compute Contains in SIMD.</summary>
     public static unsafe bool Contains(this List<long> source, long value)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return ContainsCore((ReadOnlySpan<long>)CollectionsMarshal.AsSpan(source), value);
     }
 
@@ -253,12 +267,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Contains in SIMD.</summary>
     public static unsafe bool Contains(this ulong[] source, ulong value)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return ContainsCore(new ReadOnlySpan<ulong>(source), value);
     }
 
     /// <summary>Compute Contains in SIMD.</summary>
     public static unsafe bool Contains(this List<ulong> source, ulong value)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return ContainsCore((ReadOnlySpan<ulong>)CollectionsMarshal.AsSpan(source), value);
     }
 
@@ -288,12 +304,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Contains in SIMD.</summary>
     public static unsafe bool Contains(this float[] source, float value)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return ContainsCore(new ReadOnlySpan<float>(source), value);
     }
 
     /// <summary>Compute Contains in SIMD.</summary>
     public static unsafe bool Contains(this List<float> source, float value)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return ContainsCore((ReadOnlySpan<float>)CollectionsMarshal.AsSpan(source), value);
     }
 
@@ -323,12 +341,14 @@ public static partial class SimdLinqExtensions
     /// <summary>Compute Contains in SIMD.</summary>
     public static unsafe bool Contains(this double[] source, double value)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return ContainsCore(new ReadOnlySpan<double>(source), value);
     }
 
     /// <summary>Compute Contains in SIMD.</summary>
     public static unsafe bool Contains(this List<double> source, double value)
     {
+        ArgumentNullException.ThrowIfNull(source);
         return ContainsCore((ReadOnlySpan<double>)CollectionsMarshal.AsSpan(source), value);
     }
 
