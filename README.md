@@ -17,17 +17,17 @@ This library is distributed via NuGet.
 
 > PM> Install-Package [SimdLinq](https://www.nuget.org/packages/SimdLinq)
 
-Currently supporting target framework is only **.NET 7** or above because this library using static abstract members and .NET 7 SIMD API improvement.
+Note that this library requires **.NET 7** or above because this library uses static abstract members and the new cross platform **.NET 7** SIMD Api.
 
 ```csharp
 using SimdLinq; // enable SimdLinq extension methods
 
 var array = Enumerable.Range(1, 100000).ToArray();
 
-var sum = array.Sum(); // used SimdLinqExtensions.Sum
+var sum = array.Sum(); // uses SimdLinqExtensions.Sum
 ```
 
-To enable SimdLinq per file, uses `using SimdLinq;` namespace. To enable SimdLinq per project, uses global usings in csproj.
+To enable SimdLinq per file, add the `using SimdLinq;` using directive. To enable SimdLinq across the project, use global usings in the csproj file.
 
 ```xml
 <ItemGroup>
@@ -35,9 +35,9 @@ To enable SimdLinq per file, uses `using SimdLinq;` namespace. To enable SimdLin
 </ItemGroup>
 ```
 
-`SimdLinqExtensions` has methods for concrete types(`int[]`, `Span<double`, etc...) that same name defined in LINQ, so that if a method is used that can effectively use SIMD (such as `Sum` of `int[]`), it will be executed.
+`SimdLinqExtensions` has methods for concrete data types, like `int[]` or `Span<double>`, with the same names as LINQ's methods. If a method is eligible for SIMD optimization (such as the Sum of int[]), the `SimdLinqExtensions` method will be used for improved performance.
 
-`Span<T>` has no LINQ methods but SimdLinq has it so you can call `Sum`, `Min` etc in `Span<T>`/`ReadOnlySpan<T>`.
+Unlike base LINQ, SimdLinq supports `Span<T>`, allowing you to call methods such as `Sum`, `Min`, etc. on `Span<T>` or `ReadOnlySpan<T>` collections.
 
 ```csharp
 (double Min, double Max) GetMinMax(Span<double> span)
@@ -46,27 +46,27 @@ To enable SimdLinq per file, uses `using SimdLinq;` namespace. To enable SimdLin
 }
 ```
 
-`MinMax` is a original extension of SimdLinq, that returns tuple of `Min` and `Max`.
+`MinMax` is an original SimdLinq extension, that returns a tuple of `Min` and `Max`.
 
 Compatibility
 ---
-One of the reasons why LINQ's SIMD support in .NET 7 is incomplete, is compatibility. SimdLinq top priority is SIMD enablement to fastest operation so sacrifices compatibility and some safety features. Please note the following.
+One of the reasons why LINQ's SIMD support in .NET 7 is incomplete, is compatibility. SimdLinq prioritises performance over some safety features and full compatibility with LINQ. Please note the following differences.
 
 ### Sum/Average
 
-LINQ Sum is `checked` but SimdLinq is `unchecked`(SIMD operation is not supported overflow). To reduce the risk of overflow, `Sum` and `Average` supported types are 32-bit or higher(`int`, `long`, `uint`, `ulong`, `double`, `float`).
+LINQ Sum is `checked` but SimdLinq is `unchecked`(SIMD operation is not supported overflow). To reduce the risk of overflow, `Sum` and `Average` only support types that are 32-bit or higher(`int`, `long`, `uint`, `ulong`, `double`, `float`).
 
 SimdLinq provides `LongSum` for `int` and `uint`, that returns `long`/`ulong` so avoid overflow.
 
 ### float/double
 
-LINQ Min/Max of float/double checks `NaN` but SimdLinq does not. Also, the order in which Sum is calculated is not sequential. This results in floating-point operations that are different from those in regular LINQ. For example, with LINQ `1.5710588F` but SIMD `1.5710589F`. If compatibility is not important, this is not a problem, but be aware that very small tolerance can occur.
+Unlike LINQ, SimdLinq does not check for NaN in float/double Min/Max calculations. Additionally, the order of calculation for Sum is not sequential, leading to slight differences in floating-point operations compared to regular LINQ. For instance, LINQ returns 1.5710588F, while SimdLinq returns 1.5710589F. If compatibility is not a concern, this difference is not significant, but be aware of potential small tolerance differences.
 
-Supporting collection
+Supported collections
 ---
 `T[]`, `List<T>`, `Span<T>`, `ReadOnlySpan<T>`, `Memory<T>`, `ReadOnlyMemory<T>`, `Span<T>`, `ReadOnlySpan<T>`.
 
-Supporting methods
+Supported methods
 ---
 * `Sum` for `int`, `uint`, `long`, `ulong`, `float`, `double`
 * `LongSum` for `int`, `uint`
