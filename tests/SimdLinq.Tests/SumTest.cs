@@ -56,4 +56,27 @@ public class SumTest
             }
         }
     }
+
+    [Fact]
+    public void LongSum()
+    {
+        var rand = new Random();
+        for (int i = 1; i < 1024; i++)
+        {
+            var source = Enumerable.Range(1, i).Select(x => rand.Next(-100000, 100000)).ToArray();
+
+            var simd = SimdLinqExtensions.LongSum(source);
+            var reference = Enumerable.Sum(source, x => (long)x);
+            (simd).Should().Be(reference);
+        }
+
+        for (int i = 1; i < 1024; i++)
+        {
+            var source = Enumerable.Range(1, i).Select(x => (uint)rand.Next(0, 200000)).ToArray();
+
+            var simd = SimdLinqExtensions.LongSum(source);
+            var reference = (ulong)Enumerable.Sum(source, x => x);
+            (simd).Should().Be(reference);
+        }
+    }
 }

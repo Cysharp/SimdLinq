@@ -21,3 +21,8 @@ using System.Runtime.InteropServices;
 <# methodName = "Average"; #>
 <# retType = (string x) => x is "double" or "float" ? x : "double"; #>
 <#@ include file=".\SimdLinqExtensions.ttinclude" #>
+
+<# methodName = "LongSum"; #>
+<# retType = (string x) => x is "int" ? "long" : "ulong"; #>
+<# types = new [] { "int", "uint" }; #>
+<#@ include file=".\SimdLinqExtensions.ttinclude" #>

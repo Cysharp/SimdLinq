@@ -7,7 +7,7 @@ SimdLinq is a drop-in replacement of LINQ aggregation operations(`Sum`, `Average
 
 [.NET 7 LINQ supports SIMD](https://devblogs.microsoft.com/dotnet/performance_improvements_in_net_7/#linq) but it is very limited, due to compatibility and safety issues, it is only enabled for `int[]` `Average`, `Min`, `Max` and `long[]` `Min`, `Max`.
 
-SimdLinq accelerates many methods (`Sum`, `Average`, `Min`, `Max`, `MinMax`, `Contains`, `SequenceEqual`) and types (`byte`, `sbyte`, `short`, `ushort`, ` int`, `uint`, `long`, `ulong`, `float`, `double`). It can also be used with `List<T>`, `Span<T>`, `ReadOnlySpan<T>`, `Memory<T>`, `ReadOnlyMemory<T>` in addition to `T[]`.
+SimdLinq accelerates many methods (`Sum`, `LongSum`, `Average`, `Min`, `Max`, `MinMax`, `Contains`, `SequenceEqual`) and types (`byte`, `sbyte`, `short`, `ushort`, ` int`, `uint`, `long`, `ulong`, `float`, `double`). It can also be used with `List<T>`, `Span<T>`, `ReadOnlySpan<T>`, `Memory<T>`, `ReadOnlyMemory<T>` in addition to `T[]`.
 
 Using the overload resolution priority, all target methods are automatically SIMD by simply referencing the library and setting global using.
 
@@ -56,6 +56,8 @@ One of the reasons why LINQ's SIMD support in .NET 7 is incomplete, is compatibi
 
 LINQ Sum is `checked` but SimdLinq is `unchecked`(SIMD operation is not supported overflow). To reduce the risk of overflow, `Sum` and `Average` supported types are 32-bit or higher(`int`, `long`, `uint`, `ulong`, `double`, `float`).
 
+SimdLinq provides `LongSum` for `int` and `uint`, that returns `long`/`ulong` so avoid overflow.
+
 ### float/double
 
 LINQ Min/Max of float/double checks `NaN` but SimdLinq does not. Also, the order in which Sum is calculated is not sequential. This results in floating-point operations that are different from those in regular LINQ. For example, with LINQ `1.5710588F` but SIMD `1.5710589F`. If compatibility is not important, this is not a problem, but be aware that very small tolerance can occur.
@@ -67,6 +69,7 @@ Supporting collection
 Supporting methods
 ---
 * `Sum` for `int`, `uint`, `long`, `ulong`, `float`, `double`
+* `LongSum` for `int`, `uint`
 * `Average` for `int`, `uint`, `long`, `ulong`, `float`, `double`
 * `Min` for `byte`, `sbyte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`
 * `Max` for `byte`, `sbyte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`

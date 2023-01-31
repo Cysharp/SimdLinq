@@ -20,15 +20,18 @@ var config = ManualConfig.CreateMinimumViable()
 
 
 
+
 // BenchmarkRunner.Run<IntSumBenchmark>(config, args);
 //BenchmarkRunner.Run<IntMinBenchmark>(config, args);
 //BenchmarkRunner.Run<LongMinBenchmark>(config, args);
 //BenchmarkRunner.Run<DoubleMinBenchmark>(config, args);
 //BenchmarkRunner.Run<IntContainsBenchmark>(config, args);
+BenchmarkRunner.Run<SumVsLongSumBenchmark>(config, args);
 
-BenchmarkSwitcher.FromAssembly(Assembly.GetEntryAssembly()!).RunAllJoined(config);
+// BenchmarkSwitcher.FromAssembly(Assembly.GetEntryAssembly()!).RunAllJoined(config);
 
 #else
+
 
 // _= Enumerable.Max((int[])null!);
 //System.Linq.Enumerable.Min(Array.Empty<int>());
@@ -308,4 +311,33 @@ public class IntContainsBenchmark
     }
 
 
+}
+
+
+public class SumVsLongSumBenchmark
+{
+    int[] source;
+
+    public SumVsLongSumBenchmark()
+    {
+        source = Enumerable.Range(1, 10000).ToArray();
+    }
+
+    [Benchmark]
+    public int SimdSum()
+    {
+        return SimdLinqExtensions.Sum(source);
+    }
+
+    [Benchmark]
+    public long SimdLongSum()
+    {
+        return SimdLinqExtensions.LongSum(source);
+    }
+
+    [Benchmark]
+    public int LinqSum()
+    {
+        return Enumerable.Sum(source);
+    }
 }
