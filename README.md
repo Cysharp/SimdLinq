@@ -74,6 +74,10 @@ Supporting methods
 * `Contains` for `byte`, `sbyte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`
 * `SequenceEqual` for `byte`, `sbyte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`
 
+SoA
+---
+SIMD with LINQ requires primitive array(or Span). [Cysharp/StructureOfArraysGenerator](https://github.com/Cysharp/StructureOfArraysGenerator) makes easy to create SoA array to use SIMD easily.
+
 License
 ---
 This library is licensed under the MIT License.
