@@ -9,6 +9,14 @@ namespace SimdLinq.Tests;
 public class MinMaxTest
 {
     [Fact]
+    public void TestMin()
+    {
+        var arr = new double[]{ double.NaN, double.NaN, double.NaN, double.NaN, double.NaN, double.NaN, double.NaN, 1.0, 2.0, 3.0, 4.0 ,5.0, 6.0, 8.0};
+
+        var r = arr.Min();
+    }
+
+    [Fact]
     public void Min()
     {
         MinTest(r => r.Next(), SimdLinqExtensions.Min);

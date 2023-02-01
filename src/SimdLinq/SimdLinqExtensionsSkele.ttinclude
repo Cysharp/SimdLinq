@@ -1,0 +1,43 @@
+﻿public static partial class SimdLinqExtensions
+{
+<# foreach(var type in types) { #>
+    <#= summary(type, true) #>
+    public static <#= retType(type) #> <#= methodName #>(this <#= type #>[] source)
+    {
+        ArgumentNullException.ThrowIfNull(source);
+        return <#= methodName #>Core(new ReadOnlySpan<<#= type #>>(source));
+    }
+
+    <#= summary(type, true) #>
+    public static <#= retType(type) #> <#= methodName #>(this List<<#= type #>> source)
+    {
+        ArgumentNullException.ThrowIfNull(source);
+        return <#= methodName #>Core((ReadOnlySpan<<#= type #>>)CollectionsMarshal.AsSpan(source));
+    }
+
+    <#= summary(type, false) #>
+    public static <#= retType(type) #> <#= methodName #>(this Memory<<#= type #>> source)
+    {
+        return <#= methodName #>Core((ReadOnlySpan<<#= type #>>)source.Span);
+    }
+
+    <#= summary(type, false) #>
+    public static <#= retType(type) #> <#= methodName #>(this ReadOnlyMemory<<#= type #>> source)
+    {
+        return <#= methodName #>Core(source.Span);
+    }
+
+    <#= summary(type, false) #>
+    public static <#= retType(type) #> <#= methodName #>(this Span<<#= type #>> source)
+    {
+        return <#= methodName #>Core((ReadOnlySpan<<#= type #>>)source);
+    }
+
+    <#= summary(type, false) #>
+    public static <#= retType(type) #> <#= methodName #>(this ReadOnlySpan<<#= type #>> source)
+    {
+        return <#= methodName #>Core(source);
+    }
+
+<# } #>
+}

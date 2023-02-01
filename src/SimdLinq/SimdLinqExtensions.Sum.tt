@@ -1,0 +1,52 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".cs" #>
+<#
+    string summary(string x, bool nullable)
+    {
+        var remark = "";
+        if(x is "double" or "float")
+        {
+            remark += """
+
+                /// <para>Unlike Linq, the order for the sum calculation is not sequential, leading to slight differences in floating-point operations and the resulting value. While this difference is minimal you should not use this method if you require the same result as Linq.Sum.</para>
+            """;
+        }
+        var exception = "";
+        if (nullable)
+        {
+            exception += """
+
+               /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+           """;
+        }
+
+        return $"""
+        /// <summary>
+            /// Computes the sum of a collection of <see cref="{x}"/> values using SIMD acceleration.
+            /// </summary>
+            /// <remarks>
+            /// <para>Note that unlike Linq.Sum this method is unchecked and will not throw an <see cref="OverflowException"/>.</para>{remark}
+            /// </remarks>
+            /// <param name="source">A collection of <see cref="{x}"/> values to calculate the sum of.</param>
+            /// <returns>The sum of the values in the collection.</returns>{exception}
+        """;
+    }
+
+    var retType = (string x) => x;
+   
+    var methodName = "Sum";
+    var types = new []
+    {
+        "int", "uint", "long", "ulong", "float", "double"
+    };
+#>
+namespace SimdLinq;
+
+using System.Runtime.InteropServices;
+using System.Runtime.Intrinsics;
+
+<#@ include file=".\SimdLinqExtensionsSkele.ttinclude" #>

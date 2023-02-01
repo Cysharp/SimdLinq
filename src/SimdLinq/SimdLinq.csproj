@@ -15,6 +15,14 @@
     </ItemGroup>
     
     <ItemGroup>
+        <None Update="SimdLinqExtensions.Min.tt">
+          <LastGenOutput>SimdLinqExtensions.Min.cs</LastGenOutput>
+          <Generator>TextTemplatingFileGenerator</Generator>
+        </None>
+        <None Update="SimdLinqExtensions.Sum.tt">
+          <LastGenOutput>SimdLinqExtensions.Sum.cs</LastGenOutput>
+          <Generator>TextTemplatingFileGenerator</Generator>
+        </None>
         <None Update="SimdLinqExtensions.Contains.tt">
           <LastGenOutput>SimdLinqExtensions.Contains.cs</LastGenOutput>
           <Generator>TextTemplatingFileGenerator</Generator>
@@ -38,6 +46,16 @@
     </ItemGroup>
 
     <ItemGroup>
+        <Compile Update="SimdLinqExtensions.Min.cs">
+          <DependentUpon>SimdLinqExtensions.Min.tt</DependentUpon>
+          <DesignTime>True</DesignTime>
+          <AutoGen>True</AutoGen>
+        </Compile>
+        <Compile Update="SimdLinqExtensions.Sum.cs">
+          <DependentUpon>SimdLinqExtensions.Sum.tt</DependentUpon>
+          <DesignTime>True</DesignTime>
+          <AutoGen>True</AutoGen>
+        </Compile>
         <Compile Update="SimdLinqExtensions.Contains.cs">
           <DependentUpon>SimdLinqExtensions.Contains.tt</DependentUpon>
           <DesignTime>True</DesignTime>
