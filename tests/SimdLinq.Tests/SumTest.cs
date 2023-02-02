@@ -6,15 +6,13 @@ namespace SimdLinq.Tests;
 public class SumTest
 {
     [Fact]
-    public void Null()
+    public void SumHandlesNull()
     {
-        int[] ints = null;
-        // Returns 0
-        var response = SimdLinqExtensions.Sum(ints);
+        // Arrange
+        int[]? arr = null;
 
-        //ints.Sum()
-        // Throws ArgumentNullException
-        //var linqResponse = Enumerable.Sum(;
+        // Act Assert
+        Assert.Throws<ArgumentNullException>(() => arr!.Sum());
     }
 
     [Fact]

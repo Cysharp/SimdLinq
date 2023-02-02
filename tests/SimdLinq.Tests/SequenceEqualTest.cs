@@ -1,12 +1,25 @@
 ﻿using System;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Runtime.Intrinsics;
 
 namespace SimdLinq.Tests;
 
 public class SequenceEqualTest
 {
+    [Fact]
+    public void SequenceEqualsHandlesNull()
+    {
+        // Arrange
+        int[]? first = null;
+        int[]? second = Array.Empty<int>();
+
+        // Act Assert
+        Assert.Throws<ArgumentNullException>(() => SimdLinqExtensions.SequenceEqual(first!, second));
+
+        first = Array.Empty<int>();
+        second = null;
+        Assert.Throws<ArgumentNullException>(() => SimdLinqExtensions.SequenceEqual(first, second!));
+    }
+
     [Fact]
     public void SequenceEqual()
     {

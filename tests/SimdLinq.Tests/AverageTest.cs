@@ -9,24 +9,21 @@ public class AverageTest
     public void AverageHandlesNull()
     {
         // Arrange
-        int[] arr = null;
-        //arr.Sum()
+        int[]? arr = null;
 
         // Act Assert
-        Assert.Throws<ArgumentNullException>(() => arr.Average());
+        Assert.Throws<ArgumentNullException>(() => arr!.Average());
     }
 
     [Fact]
-    public void MinHandlesNull()
+    public void AverageHandlesEmpty()
     {
         // Arrange
-        int[] arr = null;
+        var arr = Array.Empty<int>();
 
         // Act Assert
-        Assert.Throws<ArgumentNullException>(() => arr.Min());
-        Assert.Throws<ArgumentNullException>(() => arr.AsSpan().Min());
+        Assert.ThrowsAny<InvalidOperationException>(() => arr.Average());
     }
-
 
     [Fact]
     public void Average()

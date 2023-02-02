@@ -1,12 +1,20 @@
 ﻿using System;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Runtime.Intrinsics;
 
 namespace SimdLinq.Tests;
 
 public class ContainsTest
 {
+    [Fact]
+    public void ContainsHandlesNull()
+    {
+        // Arrange
+        int[]? arr = null;
+
+        // Act Assert
+        Assert.Throws<ArgumentNullException>(() => arr!.Contains(0));
+    }
+
     [Fact]
     public void Contains()
     {

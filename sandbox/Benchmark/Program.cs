@@ -1,4 +1,5 @@
-﻿using BenchmarkDotNet.Configs;
+﻿#pragma warning disable CA1050 // Declare types in namespaces
+using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Diagnosers;
 using BenchmarkDotNet.Exporters;
 using BenchmarkDotNet.Jobs;
@@ -21,7 +22,7 @@ var config = ManualConfig.CreateMinimumViable()
 
 
 
-// BenchmarkRunner.Run<IntSumBenchmark>(config, args);
+//BenchmarkRunner.Run<IntSumBenchmark>(config, args);
 //BenchmarkRunner.Run<IntMinBenchmark>(config, args);
 //BenchmarkRunner.Run<LongMinBenchmark>(config, args);
 //BenchmarkRunner.Run<DoubleMinBenchmark>(config, args);
@@ -41,7 +42,7 @@ BenchmarkRunner.Run<SumVsLongSumBenchmark>(config, args);
 
 public class IntSumBenchmark
 {
-    int[] source;
+    readonly int[] source;
 
     public IntSumBenchmark()
     {
@@ -93,7 +94,7 @@ public class IntSumBenchmark
 
 public class IntMinBenchmark
 {
-    int[] source;
+    readonly int[] source;
 
     public IntMinBenchmark()
     {
@@ -149,7 +150,7 @@ public class IntMinBenchmark
 
 public class LongMinBenchmark
 {
-    long[] source;
+    readonly long[] source;
 
     public LongMinBenchmark()
     {
@@ -205,7 +206,7 @@ public class LongMinBenchmark
 
 public class DoubleMinBenchmark
 {
-    double[] source;
+    readonly double[] source;
 
     public DoubleMinBenchmark()
     {
@@ -261,8 +262,8 @@ public class DoubleMinBenchmark
 
 public class IntContainsBenchmark
 {
-    int[] source;
-    int target;
+    readonly int[] source;
+    readonly int target;
     public IntContainsBenchmark()
     {
         source = Enumerable.Range(1, 10000).ToArray();
@@ -316,7 +317,7 @@ public class IntContainsBenchmark
 
 public class SumVsLongSumBenchmark
 {
-    int[] source;
+    readonly int[] source;
 
     public SumVsLongSumBenchmark()
     {
