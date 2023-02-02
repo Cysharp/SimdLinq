@@ -5,7 +5,33 @@
 <#@ import namespace="System.Collections.Generic" #>
 <#@ output extension=".cs" #>
 <#
-    var signature = "public static bool SequenceEqual";
+    string summary(string x, bool firstNull, bool secondNull)
+    {
+        var exception = "";
+        if (firstNull)
+        {
+            exception += """
+
+               /// <exception cref="ArgumentNullException"><paramref name="first"/> is <see langword="null"/>.</exception>
+           """;
+        }
+        if (secondNull)
+        {
+            exception += """
+
+               /// <exception cref="ArgumentNullException"><paramref name="second"/> is <see langword="null"/>.</exception>
+           """;
+        }
+
+        return $$"""
+        /// <summary>
+            /// Determines whether two sequences are equal by comparing the elements using the default <see cref="IEqualityComparer{T}"/>.
+            /// </summary>
+            /// <param name="first">The first sequence to compare.</param>
+            /// <param name="second">The second sequence to compare.</param>
+            /// <returns><see langword="true"/> if the two sequences are equal; otherwise, <see langword="false"/>.</returns>{{exception}}
+        """;
+    }
     var types = new []
     {
         "byte", "sbyte", "short", "ushort", "int", "uint", "long", "ulong", "float", "double"
@@ -20,58 +46,68 @@ using System.Runtime.InteropServices;
 public static partial class SimdLinqExtensions
 {
 <# foreach(var type in types) { #>
-    <#= signature #>(<#= type #>[] first, <#= type #>[] second)
+    <#= summary(type, true, true) #>
+    public static bool SequenceEqual(<#= type #>[] first, <#= type #>[] second)
     {
         ArgumentNullException.ThrowIfNull(first);
         ArgumentNullException.ThrowIfNull(second);
         return MemoryExtensions.SequenceEqual(first.AsSpan(), second.AsSpan());
     }
 
-    <#= signature #>(<#= type #>[] first, ReadOnlySpan<<#= type #>> second)
+    <#= summary(type, true, false) #>
+    public static bool SequenceEqual(<#= type #>[] first, ReadOnlySpan<<#= type #>> second)
     {
         ArgumentNullException.ThrowIfNull(first);
         return MemoryExtensions.SequenceEqual(first.AsSpan(), second);
     }
 
-    <#= signature #>(List<<#= type #>> first, List<<#= type #>> second)
+    <#= summary(type, true, true) #>
+    public static bool SequenceEqual(List<<#= type #>> first, List<<#= type #>> second)
     {
         ArgumentNullException.ThrowIfNull(first);
         ArgumentNullException.ThrowIfNull(second);
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<<#= type #>>)CollectionsMarshal.AsSpan(first), (ReadOnlySpan<<#= type #>>)CollectionsMarshal.AsSpan(second));
     }
 
-    <#= signature #>(List<<#= type #>> first, ReadOnlySpan<<#= type #>> second)
+    <#= summary(type, true, false) #>
+    public static bool SequenceEqual(List<<#= type #>> first, ReadOnlySpan<<#= type #>> second)
     {
         ArgumentNullException.ThrowIfNull(first);
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<<#= type #>>)CollectionsMarshal.AsSpan(first), second);
     }
 
-    <#= signature #>(Memory<<#= type #>> first, Memory<<#= type #>> second)
+    <#= summary(type, false, false) #>
+    public static bool SequenceEqual(Memory<<#= type #>> first, Memory<<#= type #>> second)
     {
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<<#= type #>>)first.Span, (ReadOnlySpan<<#= type #>>)second.Span);
     }
 
-    <#= signature #>(Memory<<#= type #>> first, ReadOnlySpan<<#= type #>> second)
+    <#= summary(type, false, false) #>
+    public static bool SequenceEqual(Memory<<#= type #>> first, ReadOnlySpan<<#= type #>> second)
     {
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<<#= type #>>)first.Span, second);
     }
 
-    <#= signature #>(ReadOnlyMemory<<#= type #>> first, ReadOnlyMemory<<#= type #>> second)
+    <#= summary(type, false, false) #>
+    public static bool SequenceEqual(ReadOnlyMemory<<#= type #>> first, ReadOnlyMemory<<#= type #>> second)
     {
         return MemoryExtensions.SequenceEqual(first.Span, second.Span);
     }
 
-    <#= signature #>(ReadOnlyMemory<<#= type #>> first, ReadOnlySpan<<#= type #>> second)
+    <#= summary(type, false, false) #>
+    public static bool SequenceEqual(ReadOnlyMemory<<#= type #>> first, ReadOnlySpan<<#= type #>> second)
     {
         return MemoryExtensions.SequenceEqual(first.Span, second);
     }
 
-    <#= signature #>(Span<<#= type #>> first, Span<<#= type #>> second)
+    <#= summary(type, false, false) #>
+    public static bool SequenceEqual(Span<<#= type #>> first, Span<<#= type #>> second)
     {
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<<#= type #>>)first, (ReadOnlySpan<<#= type #>>)second);
     }
 
-    <#= signature #>(Span<<#= type #>> first, ReadOnlySpan<<#= type #>> second)
+    <#= summary(type, false, false) #>
+    public static bool SequenceEqual(Span<<#= type #>> first, ReadOnlySpan<<#= type #>> second)
     {
         return MemoryExtensions.SequenceEqual((ReadOnlySpan<<#= type #>>)first, second);
     }

@@ -1,16 +1,15 @@
 ﻿namespace SimdLinq;
 
 using System.Runtime.InteropServices;
-using System.Runtime.Intrinsics;
 
 public static partial class SimdLinqExtensions
 {
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="byte"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="byte"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="byte"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="byte"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static byte Min(this byte[] source)
     {
@@ -19,11 +18,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="byte"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="byte"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="byte"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="byte"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static byte Min(this List<byte> source)
     {
@@ -32,10 +31,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="byte"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="byte"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="byte"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="byte"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static byte Min(this Memory<byte> source)
     {
@@ -43,10 +42,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="byte"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="byte"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="byte"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="byte"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static byte Min(this ReadOnlyMemory<byte> source)
     {
@@ -54,10 +53,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="byte"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="byte"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="byte"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="byte"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static byte Min(this Span<byte> source)
     {
@@ -65,10 +64,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="byte"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="byte"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="byte"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="byte"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static byte Min(this ReadOnlySpan<byte> source)
     {
@@ -76,11 +75,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="sbyte"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="sbyte"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="sbyte"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="sbyte"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static sbyte Min(this sbyte[] source)
     {
@@ -89,11 +88,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="sbyte"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="sbyte"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="sbyte"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="sbyte"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static sbyte Min(this List<sbyte> source)
     {
@@ -102,10 +101,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="sbyte"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="sbyte"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="sbyte"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="sbyte"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static sbyte Min(this Memory<sbyte> source)
     {
@@ -113,10 +112,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="sbyte"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="sbyte"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="sbyte"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="sbyte"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static sbyte Min(this ReadOnlyMemory<sbyte> source)
     {
@@ -124,10 +123,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="sbyte"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="sbyte"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="sbyte"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="sbyte"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static sbyte Min(this Span<sbyte> source)
     {
@@ -135,10 +134,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="sbyte"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="sbyte"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="sbyte"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="sbyte"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static sbyte Min(this ReadOnlySpan<sbyte> source)
     {
@@ -146,11 +145,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="short"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="short"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="short"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="short"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static short Min(this short[] source)
     {
@@ -159,11 +158,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="short"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="short"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="short"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="short"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static short Min(this List<short> source)
     {
@@ -172,10 +171,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="short"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="short"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="short"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="short"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static short Min(this Memory<short> source)
     {
@@ -183,10 +182,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="short"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="short"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="short"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="short"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static short Min(this ReadOnlyMemory<short> source)
     {
@@ -194,10 +193,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="short"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="short"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="short"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="short"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static short Min(this Span<short> source)
     {
@@ -205,10 +204,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="short"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="short"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="short"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="short"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static short Min(this ReadOnlySpan<short> source)
     {
@@ -216,11 +215,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="ushort"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="ushort"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="ushort"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="ushort"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static ushort Min(this ushort[] source)
     {
@@ -229,11 +228,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="ushort"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="ushort"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="ushort"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="ushort"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static ushort Min(this List<ushort> source)
     {
@@ -242,10 +241,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="ushort"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="ushort"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="ushort"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="ushort"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static ushort Min(this Memory<ushort> source)
     {
@@ -253,10 +252,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="ushort"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="ushort"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="ushort"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="ushort"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static ushort Min(this ReadOnlyMemory<ushort> source)
     {
@@ -264,10 +263,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="ushort"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="ushort"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="ushort"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="ushort"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static ushort Min(this Span<ushort> source)
     {
@@ -275,10 +274,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="ushort"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="ushort"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="ushort"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="ushort"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static ushort Min(this ReadOnlySpan<ushort> source)
     {
@@ -286,11 +285,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="int"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="int"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="int"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="int"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static int Min(this int[] source)
     {
@@ -299,11 +298,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="int"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="int"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="int"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="int"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static int Min(this List<int> source)
     {
@@ -312,10 +311,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="int"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="int"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="int"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="int"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static int Min(this Memory<int> source)
     {
@@ -323,10 +322,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="int"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="int"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="int"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="int"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static int Min(this ReadOnlyMemory<int> source)
     {
@@ -334,10 +333,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="int"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="int"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="int"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="int"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static int Min(this Span<int> source)
     {
@@ -345,10 +344,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="int"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="int"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="int"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="int"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static int Min(this ReadOnlySpan<int> source)
     {
@@ -356,11 +355,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="uint"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="uint"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="uint"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="uint"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static uint Min(this uint[] source)
     {
@@ -369,11 +368,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="uint"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="uint"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="uint"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="uint"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static uint Min(this List<uint> source)
     {
@@ -382,10 +381,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="uint"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="uint"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="uint"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="uint"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static uint Min(this Memory<uint> source)
     {
@@ -393,10 +392,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="uint"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="uint"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="uint"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="uint"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static uint Min(this ReadOnlyMemory<uint> source)
     {
@@ -404,10 +403,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="uint"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="uint"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="uint"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="uint"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static uint Min(this Span<uint> source)
     {
@@ -415,10 +414,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="uint"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="uint"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="uint"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="uint"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static uint Min(this ReadOnlySpan<uint> source)
     {
@@ -426,11 +425,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="long"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="long"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="long"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="long"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static long Min(this long[] source)
     {
@@ -439,11 +438,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="long"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="long"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="long"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="long"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static long Min(this List<long> source)
     {
@@ -452,10 +451,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="long"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="long"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="long"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="long"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static long Min(this Memory<long> source)
     {
@@ -463,10 +462,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="long"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="long"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="long"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="long"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static long Min(this ReadOnlyMemory<long> source)
     {
@@ -474,10 +473,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="long"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="long"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="long"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="long"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static long Min(this Span<long> source)
     {
@@ -485,10 +484,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="long"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="long"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="long"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="long"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static long Min(this ReadOnlySpan<long> source)
     {
@@ -496,11 +495,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="ulong"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="ulong"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="ulong"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="ulong"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static ulong Min(this ulong[] source)
     {
@@ -509,11 +508,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="ulong"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="ulong"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="ulong"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="ulong"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static ulong Min(this List<ulong> source)
     {
@@ -522,10 +521,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="ulong"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="ulong"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="ulong"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="ulong"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static ulong Min(this Memory<ulong> source)
     {
@@ -533,10 +532,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="ulong"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="ulong"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="ulong"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="ulong"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static ulong Min(this ReadOnlyMemory<ulong> source)
     {
@@ -544,10 +543,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="ulong"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="ulong"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="ulong"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="ulong"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static ulong Min(this Span<ulong> source)
     {
@@ -555,10 +554,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="ulong"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="ulong"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="ulong"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="ulong"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static ulong Min(this ReadOnlySpan<ulong> source)
     {
@@ -566,12 +565,12 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="float"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="float"/> values using SIMD acceleration.
     /// </summary>
     /// <remarks>This method does not check for <see cref="float.NaN"/> <see cref="float"/>/<see cref="double"/> values and should not be used when <paramref name="source"/> may contain one.</remarks>
-    /// <param name="source">A collection of <see cref="float"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="float"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static float Min(this float[] source)
     {
@@ -580,12 +579,12 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="float"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="float"/> values using SIMD acceleration.
     /// </summary>
     /// <remarks>This method does not check for <see cref="float.NaN"/> <see cref="float"/>/<see cref="double"/> values and should not be used when <paramref name="source"/> may contain one.</remarks>
-    /// <param name="source">A collection of <see cref="float"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="float"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static float Min(this List<float> source)
     {
@@ -594,11 +593,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="float"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="float"/> values using SIMD acceleration.
     /// </summary>
     /// <remarks>This method does not check for <see cref="float.NaN"/> <see cref="float"/>/<see cref="double"/> values and should not be used when <paramref name="source"/> may contain one.</remarks>
-    /// <param name="source">A collection of <see cref="float"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="float"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static float Min(this Memory<float> source)
     {
@@ -606,11 +605,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="float"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="float"/> values using SIMD acceleration.
     /// </summary>
     /// <remarks>This method does not check for <see cref="float.NaN"/> <see cref="float"/>/<see cref="double"/> values and should not be used when <paramref name="source"/> may contain one.</remarks>
-    /// <param name="source">A collection of <see cref="float"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="float"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static float Min(this ReadOnlyMemory<float> source)
     {
@@ -618,11 +617,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="float"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="float"/> values using SIMD acceleration.
     /// </summary>
     /// <remarks>This method does not check for <see cref="float.NaN"/> <see cref="float"/>/<see cref="double"/> values and should not be used when <paramref name="source"/> may contain one.</remarks>
-    /// <param name="source">A collection of <see cref="float"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="float"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static float Min(this Span<float> source)
     {
@@ -630,11 +629,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="float"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="float"/> values using SIMD acceleration.
     /// </summary>
     /// <remarks>This method does not check for <see cref="float.NaN"/> <see cref="float"/>/<see cref="double"/> values and should not be used when <paramref name="source"/> may contain one.</remarks>
-    /// <param name="source">A collection of <see cref="float"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="float"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static float Min(this ReadOnlySpan<float> source)
     {
@@ -642,12 +641,12 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="double"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="double"/> values using SIMD acceleration.
     /// </summary>
     /// <remarks>This method does not check for <see cref="float.NaN"/> <see cref="float"/>/<see cref="double"/> values and should not be used when <paramref name="source"/> may contain one.</remarks>
-    /// <param name="source">A collection of <see cref="double"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="double"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static double Min(this double[] source)
     {
@@ -656,12 +655,12 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="double"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="double"/> values using SIMD acceleration.
     /// </summary>
     /// <remarks>This method does not check for <see cref="float.NaN"/> <see cref="float"/>/<see cref="double"/> values and should not be used when <paramref name="source"/> may contain one.</remarks>
-    /// <param name="source">A collection of <see cref="double"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="double"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static double Min(this List<double> source)
     {
@@ -670,11 +669,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="double"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="double"/> values using SIMD acceleration.
     /// </summary>
     /// <remarks>This method does not check for <see cref="float.NaN"/> <see cref="float"/>/<see cref="double"/> values and should not be used when <paramref name="source"/> may contain one.</remarks>
-    /// <param name="source">A collection of <see cref="double"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="double"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static double Min(this Memory<double> source)
     {
@@ -682,11 +681,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="double"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="double"/> values using SIMD acceleration.
     /// </summary>
     /// <remarks>This method does not check for <see cref="float.NaN"/> <see cref="float"/>/<see cref="double"/> values and should not be used when <paramref name="source"/> may contain one.</remarks>
-    /// <param name="source">A collection of <see cref="double"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="double"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static double Min(this ReadOnlyMemory<double> source)
     {
@@ -694,11 +693,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="double"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="double"/> values using SIMD acceleration.
     /// </summary>
     /// <remarks>This method does not check for <see cref="float.NaN"/> <see cref="float"/>/<see cref="double"/> values and should not be used when <paramref name="source"/> may contain one.</remarks>
-    /// <param name="source">A collection of <see cref="double"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="double"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static double Min(this Span<double> source)
     {
@@ -706,11 +705,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the minimum value in a collection of <see cref="double"/> values using SIMD acceleration.
+    /// Returns the minimum value in a sequence of <see cref="double"/> values using SIMD acceleration.
     /// </summary>
     /// <remarks>This method does not check for <see cref="float.NaN"/> <see cref="float"/>/<see cref="double"/> values and should not be used when <paramref name="source"/> may contain one.</remarks>
-    /// <param name="source">A collection of <see cref="double"/> values to determine the minimum value of.</param>
-    /// <returns>The minimum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="double"/> values to determine the minimum value of.</param>
+    /// <returns>The minimum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static double Min(this ReadOnlySpan<double> source)
     {

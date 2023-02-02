@@ -20,19 +20,21 @@
         {
             exception += """
 
-               /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+               /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
            """;
         }
 
-        return $"""
+        var cnvType = (string x) => x switch{ "uint" => "int", "ulong" => "long", _=> x};
+
+        return $$"""
         /// <summary>
-            /// Computes the sum of a collection of <see cref="{x}"/> values using SIMD acceleration.
+            /// Computes the sum of a sequence of <see cref="{{x}}"/> values using SIMD acceleration.
             /// </summary>
             /// <remarks>
-            /// <para>Note that unlike Linq.Sum this method is unchecked and will not throw an <see cref="OverflowException"/>.</para>{remark}
+            /// <para>Note that unlike <see cref="Enumerable.Sum(IEnumerable{{{cnvType(x)}}})"/> this method is unchecked and will not throw an <see cref="OverflowException"/>.</para>{{remark}}
             /// </remarks>
-            /// <param name="source">A collection of <see cref="{x}"/> values to calculate the sum of.</param>
-            /// <returns>The sum of the values in the collection.</returns>{exception}
+            /// <param name="source">A sequence of <see cref="{{x}}"/> values to calculate the sum of.</param>
+            /// <returns>The sum of the values in the sequence.</returns>{{exception}}
         """;
     }
 
@@ -47,6 +49,5 @@
 namespace SimdLinq;
 
 using System.Runtime.InteropServices;
-using System.Runtime.Intrinsics;
 
-<#@ include file=".\SimdLinqExtensionsSkele.ttinclude" #>
+<#@ include file=".\SimdLinqExtensions.ttinclude" #>

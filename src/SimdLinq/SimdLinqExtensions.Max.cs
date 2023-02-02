@@ -1,16 +1,15 @@
 ﻿namespace SimdLinq;
 
 using System.Runtime.InteropServices;
-using System.Runtime.Intrinsics;
 
 public static partial class SimdLinqExtensions
 {
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="byte"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="byte"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="byte"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="byte"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static byte Max(this byte[] source)
     {
@@ -19,11 +18,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="byte"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="byte"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="byte"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="byte"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static byte Max(this List<byte> source)
     {
@@ -32,10 +31,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="byte"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="byte"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="byte"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="byte"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static byte Max(this Memory<byte> source)
     {
@@ -43,10 +42,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="byte"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="byte"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="byte"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="byte"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static byte Max(this ReadOnlyMemory<byte> source)
     {
@@ -54,10 +53,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="byte"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="byte"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="byte"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="byte"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static byte Max(this Span<byte> source)
     {
@@ -65,10 +64,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="byte"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="byte"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="byte"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="byte"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static byte Max(this ReadOnlySpan<byte> source)
     {
@@ -76,11 +75,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="sbyte"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="sbyte"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="sbyte"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="sbyte"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static sbyte Max(this sbyte[] source)
     {
@@ -89,11 +88,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="sbyte"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="sbyte"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="sbyte"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="sbyte"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static sbyte Max(this List<sbyte> source)
     {
@@ -102,10 +101,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="sbyte"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="sbyte"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="sbyte"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="sbyte"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static sbyte Max(this Memory<sbyte> source)
     {
@@ -113,10 +112,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="sbyte"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="sbyte"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="sbyte"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="sbyte"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static sbyte Max(this ReadOnlyMemory<sbyte> source)
     {
@@ -124,10 +123,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="sbyte"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="sbyte"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="sbyte"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="sbyte"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static sbyte Max(this Span<sbyte> source)
     {
@@ -135,10 +134,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="sbyte"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="sbyte"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="sbyte"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="sbyte"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static sbyte Max(this ReadOnlySpan<sbyte> source)
     {
@@ -146,11 +145,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="short"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="short"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="short"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="short"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static short Max(this short[] source)
     {
@@ -159,11 +158,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="short"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="short"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="short"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="short"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static short Max(this List<short> source)
     {
@@ -172,10 +171,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="short"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="short"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="short"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="short"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static short Max(this Memory<short> source)
     {
@@ -183,10 +182,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="short"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="short"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="short"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="short"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static short Max(this ReadOnlyMemory<short> source)
     {
@@ -194,10 +193,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="short"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="short"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="short"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="short"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static short Max(this Span<short> source)
     {
@@ -205,10 +204,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="short"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="short"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="short"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="short"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static short Max(this ReadOnlySpan<short> source)
     {
@@ -216,11 +215,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="ushort"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="ushort"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="ushort"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="ushort"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static ushort Max(this ushort[] source)
     {
@@ -229,11 +228,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="ushort"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="ushort"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="ushort"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="ushort"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static ushort Max(this List<ushort> source)
     {
@@ -242,10 +241,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="ushort"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="ushort"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="ushort"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="ushort"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static ushort Max(this Memory<ushort> source)
     {
@@ -253,10 +252,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="ushort"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="ushort"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="ushort"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="ushort"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static ushort Max(this ReadOnlyMemory<ushort> source)
     {
@@ -264,10 +263,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="ushort"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="ushort"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="ushort"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="ushort"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static ushort Max(this Span<ushort> source)
     {
@@ -275,10 +274,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="ushort"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="ushort"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="ushort"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="ushort"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static ushort Max(this ReadOnlySpan<ushort> source)
     {
@@ -286,11 +285,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="int"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="int"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="int"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="int"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static int Max(this int[] source)
     {
@@ -299,11 +298,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="int"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="int"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="int"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="int"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static int Max(this List<int> source)
     {
@@ -312,10 +311,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="int"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="int"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="int"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="int"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static int Max(this Memory<int> source)
     {
@@ -323,10 +322,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="int"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="int"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="int"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="int"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static int Max(this ReadOnlyMemory<int> source)
     {
@@ -334,10 +333,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="int"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="int"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="int"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="int"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static int Max(this Span<int> source)
     {
@@ -345,10 +344,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="int"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="int"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="int"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="int"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static int Max(this ReadOnlySpan<int> source)
     {
@@ -356,11 +355,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="uint"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="uint"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="uint"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="uint"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static uint Max(this uint[] source)
     {
@@ -369,11 +368,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="uint"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="uint"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="uint"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="uint"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static uint Max(this List<uint> source)
     {
@@ -382,10 +381,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="uint"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="uint"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="uint"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="uint"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static uint Max(this Memory<uint> source)
     {
@@ -393,10 +392,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="uint"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="uint"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="uint"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="uint"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static uint Max(this ReadOnlyMemory<uint> source)
     {
@@ -404,10 +403,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="uint"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="uint"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="uint"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="uint"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static uint Max(this Span<uint> source)
     {
@@ -415,10 +414,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="uint"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="uint"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="uint"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="uint"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static uint Max(this ReadOnlySpan<uint> source)
     {
@@ -426,11 +425,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="long"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="long"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="long"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="long"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static long Max(this long[] source)
     {
@@ -439,11 +438,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="long"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="long"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="long"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="long"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static long Max(this List<long> source)
     {
@@ -452,10 +451,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="long"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="long"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="long"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="long"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static long Max(this Memory<long> source)
     {
@@ -463,10 +462,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="long"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="long"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="long"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="long"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static long Max(this ReadOnlyMemory<long> source)
     {
@@ -474,10 +473,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="long"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="long"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="long"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="long"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static long Max(this Span<long> source)
     {
@@ -485,10 +484,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="long"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="long"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="long"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="long"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static long Max(this ReadOnlySpan<long> source)
     {
@@ -496,11 +495,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="ulong"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="ulong"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="ulong"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="ulong"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static ulong Max(this ulong[] source)
     {
@@ -509,11 +508,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="ulong"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="ulong"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="ulong"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="ulong"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static ulong Max(this List<ulong> source)
     {
@@ -522,10 +521,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="ulong"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="ulong"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="ulong"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="ulong"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static ulong Max(this Memory<ulong> source)
     {
@@ -533,10 +532,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="ulong"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="ulong"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="ulong"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="ulong"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static ulong Max(this ReadOnlyMemory<ulong> source)
     {
@@ -544,10 +543,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="ulong"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="ulong"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="ulong"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="ulong"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static ulong Max(this Span<ulong> source)
     {
@@ -555,10 +554,10 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="ulong"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="ulong"/> values using SIMD acceleration.
     /// </summary>
-    /// <param name="source">A collection of <see cref="ulong"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="ulong"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static ulong Max(this ReadOnlySpan<ulong> source)
     {
@@ -566,12 +565,12 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="float"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="float"/> values using SIMD acceleration.
     /// </summary>
     /// <remarks>This method does not check for <see cref="float.NaN"/> <see cref="float"/>/<see cref="double"/> values and should not be used when <paramref name="source"/> may contain one.</remarks>
-    /// <param name="source">A collection of <see cref="float"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="float"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static float Max(this float[] source)
     {
@@ -580,12 +579,12 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="float"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="float"/> values using SIMD acceleration.
     /// </summary>
     /// <remarks>This method does not check for <see cref="float.NaN"/> <see cref="float"/>/<see cref="double"/> values and should not be used when <paramref name="source"/> may contain one.</remarks>
-    /// <param name="source">A collection of <see cref="float"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="float"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static float Max(this List<float> source)
     {
@@ -594,11 +593,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="float"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="float"/> values using SIMD acceleration.
     /// </summary>
     /// <remarks>This method does not check for <see cref="float.NaN"/> <see cref="float"/>/<see cref="double"/> values and should not be used when <paramref name="source"/> may contain one.</remarks>
-    /// <param name="source">A collection of <see cref="float"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="float"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static float Max(this Memory<float> source)
     {
@@ -606,11 +605,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="float"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="float"/> values using SIMD acceleration.
     /// </summary>
     /// <remarks>This method does not check for <see cref="float.NaN"/> <see cref="float"/>/<see cref="double"/> values and should not be used when <paramref name="source"/> may contain one.</remarks>
-    /// <param name="source">A collection of <see cref="float"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="float"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static float Max(this ReadOnlyMemory<float> source)
     {
@@ -618,11 +617,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="float"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="float"/> values using SIMD acceleration.
     /// </summary>
     /// <remarks>This method does not check for <see cref="float.NaN"/> <see cref="float"/>/<see cref="double"/> values and should not be used when <paramref name="source"/> may contain one.</remarks>
-    /// <param name="source">A collection of <see cref="float"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="float"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static float Max(this Span<float> source)
     {
@@ -630,11 +629,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="float"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="float"/> values using SIMD acceleration.
     /// </summary>
     /// <remarks>This method does not check for <see cref="float.NaN"/> <see cref="float"/>/<see cref="double"/> values and should not be used when <paramref name="source"/> may contain one.</remarks>
-    /// <param name="source">A collection of <see cref="float"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="float"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static float Max(this ReadOnlySpan<float> source)
     {
@@ -642,12 +641,12 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="double"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="double"/> values using SIMD acceleration.
     /// </summary>
     /// <remarks>This method does not check for <see cref="float.NaN"/> <see cref="float"/>/<see cref="double"/> values and should not be used when <paramref name="source"/> may contain one.</remarks>
-    /// <param name="source">A collection of <see cref="double"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="double"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static double Max(this double[] source)
     {
@@ -656,12 +655,12 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="double"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="double"/> values using SIMD acceleration.
     /// </summary>
     /// <remarks>This method does not check for <see cref="float.NaN"/> <see cref="float"/>/<see cref="double"/> values and should not be used when <paramref name="source"/> may contain one.</remarks>
-    /// <param name="source">A collection of <see cref="double"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <param name="source">A sequence of <see cref="double"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static double Max(this List<double> source)
     {
@@ -670,11 +669,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="double"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="double"/> values using SIMD acceleration.
     /// </summary>
     /// <remarks>This method does not check for <see cref="float.NaN"/> <see cref="float"/>/<see cref="double"/> values and should not be used when <paramref name="source"/> may contain one.</remarks>
-    /// <param name="source">A collection of <see cref="double"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="double"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static double Max(this Memory<double> source)
     {
@@ -682,11 +681,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="double"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="double"/> values using SIMD acceleration.
     /// </summary>
     /// <remarks>This method does not check for <see cref="float.NaN"/> <see cref="float"/>/<see cref="double"/> values and should not be used when <paramref name="source"/> may contain one.</remarks>
-    /// <param name="source">A collection of <see cref="double"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="double"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static double Max(this ReadOnlyMemory<double> source)
     {
@@ -694,11 +693,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="double"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="double"/> values using SIMD acceleration.
     /// </summary>
     /// <remarks>This method does not check for <see cref="float.NaN"/> <see cref="float"/>/<see cref="double"/> values and should not be used when <paramref name="source"/> may contain one.</remarks>
-    /// <param name="source">A collection of <see cref="double"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="double"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static double Max(this Span<double> source)
     {
@@ -706,11 +705,11 @@ public static partial class SimdLinqExtensions
     }
 
     /// <summary>
-    /// Returns the maximum value in a collection of <see cref="double"/> values using SIMD acceleration.
+    /// Returns the maximum value in a sequence of <see cref="double"/> values using SIMD acceleration.
     /// </summary>
     /// <remarks>This method does not check for <see cref="float.NaN"/> <see cref="float"/>/<see cref="double"/> values and should not be used when <paramref name="source"/> may contain one.</remarks>
-    /// <param name="source">A collection of <see cref="double"/> values to determine the maximum value of.</param>
-    /// <returns>The maximum value in the collection.</returns>
+    /// <param name="source">A sequence of <see cref="double"/> values to determine the maximum value of.</param>
+    /// <returns>The maximum value in the sequence.</returns>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static double Max(this ReadOnlySpan<double> source)
     {

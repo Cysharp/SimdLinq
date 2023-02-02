@@ -20,7 +20,7 @@
         {
             exception += """
 
-               /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+               /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
            """;
         }
 
@@ -46,4 +46,4 @@ namespace SimdLinq;
 
 using System.Runtime.InteropServices;
 
-<#@ include file=".\SimdLinqExtensionsSkele.ttinclude" #>
+<#@ include file=".\SimdLinqExtensions.ttinclude" #>

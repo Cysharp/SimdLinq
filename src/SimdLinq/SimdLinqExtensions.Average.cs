@@ -9,7 +9,7 @@ public static partial class SimdLinqExtensions
     /// </summary>
     /// <param name="source">A collection of <see cref="int"/> values to calculate the average of.</param>
     /// <returns>The average of the collection of values.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static double Average(this int[] source)
     {
@@ -22,7 +22,7 @@ public static partial class SimdLinqExtensions
     /// </summary>
     /// <param name="source">A collection of <see cref="int"/> values to calculate the average of.</param>
     /// <returns>The average of the collection of values.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static double Average(this List<int> source)
     {
@@ -79,7 +79,7 @@ public static partial class SimdLinqExtensions
     /// </summary>
     /// <param name="source">A collection of <see cref="long"/> values to calculate the average of.</param>
     /// <returns>The average of the collection of values.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static double Average(this long[] source)
     {
@@ -92,7 +92,7 @@ public static partial class SimdLinqExtensions
     /// </summary>
     /// <param name="source">A collection of <see cref="long"/> values to calculate the average of.</param>
     /// <returns>The average of the collection of values.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static double Average(this List<long> source)
     {
@@ -150,7 +150,7 @@ public static partial class SimdLinqExtensions
     /// <para>Unlike Linq, the order for the sum calculation is not sequential, leading to slight differences in floating-point operations and the resulting value. While this difference is minimal you should not use this method if you require the same result as Linq.Average.</para>
     /// <param name="source">A collection of <see cref="double"/> values to calculate the average of.</param>
     /// <returns>The average of the collection of values.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static double Average(this double[] source)
     {
@@ -164,7 +164,7 @@ public static partial class SimdLinqExtensions
     /// <para>Unlike Linq, the order for the sum calculation is not sequential, leading to slight differences in floating-point operations and the resulting value. While this difference is minimal you should not use this method if you require the same result as Linq.Average.</para>
     /// <param name="source">A collection of <see cref="double"/> values to calculate the average of.</param>
     /// <returns>The average of the collection of values.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static double Average(this List<double> source)
     {
@@ -226,7 +226,7 @@ public static partial class SimdLinqExtensions
     /// <para>Unlike Linq, the order for the sum calculation is not sequential, leading to slight differences in floating-point operations and the resulting value. While this difference is minimal you should not use this method if you require the same result as Linq.Average.</para>
     /// <param name="source">A collection of <see cref="float"/> values to calculate the average of.</param>
     /// <returns>The average of the collection of values.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static float Average(this float[] source)
     {
@@ -240,7 +240,7 @@ public static partial class SimdLinqExtensions
     /// <para>Unlike Linq, the order for the sum calculation is not sequential, leading to slight differences in floating-point operations and the resulting value. While this difference is minimal you should not use this method if you require the same result as Linq.Average.</para>
     /// <param name="source">A collection of <see cref="float"/> values to calculate the average of.</param>
     /// <returns>The average of the collection of values.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static float Average(this List<float> source)
     {
@@ -301,7 +301,7 @@ public static partial class SimdLinqExtensions
     /// </summary>
     /// <param name="source">A collection of <see cref="uint"/> values to calculate the average of.</param>
     /// <returns>The average of the collection of values.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static double Average(this uint[] source)
     {
@@ -314,7 +314,7 @@ public static partial class SimdLinqExtensions
     /// </summary>
     /// <param name="source">A collection of <see cref="uint"/> values to calculate the average of.</param>
     /// <returns>The average of the collection of values.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static double Average(this List<uint> source)
     {
@@ -371,7 +371,7 @@ public static partial class SimdLinqExtensions
     /// </summary>
     /// <param name="source">A collection of <see cref="ulong"/> values to calculate the average of.</param>
     /// <returns>The average of the collection of values.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static double Average(this ulong[] source)
     {
@@ -384,7 +384,7 @@ public static partial class SimdLinqExtensions
     /// </summary>
     /// <param name="source">A collection of <see cref="ulong"/> values to calculate the average of.</param>
     /// <returns>The average of the collection of values.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
     public static double Average(this List<ulong> source)
     {
