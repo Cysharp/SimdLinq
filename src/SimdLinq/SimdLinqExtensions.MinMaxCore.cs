@@ -239,10 +239,4 @@ public static partial class SimdLinqExtensions
             return (min, max);
         }
     }
-
-    [DoesNotReturn]
-    static void ThrowNoElements()
-    {
-        throw new InvalidOperationException("Sequence contains no elements");
-    }
 }
