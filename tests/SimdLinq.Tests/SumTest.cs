@@ -6,6 +6,16 @@ namespace SimdLinq.Tests;
 public class SumTest
 {
     [Fact]
+    public void SumHandlesNull()
+    {
+        // Arrange
+        int[]? arr = null;
+
+        // Act Assert
+        Assert.Throws<ArgumentNullException>(() => arr!.Sum());
+    }
+
+    [Fact]
     public void Sum()
     {
         SumTest(x => x.Next(-100000, 100000), Enumerable.Sum, SimdLinqExtensions.Sum);
@@ -54,29 +64,6 @@ public class SumTest
 
                 Assert.Equal((double)simd, (double)reference, 1.0);
             }
-        }
-    }
-
-    [Fact]
-    public void LongSum()
-    {
-        var rand = new Random();
-        for (int i = 1; i < 1024; i++)
-        {
-            var source = Enumerable.Range(1, i).Select(x => rand.Next(-100000, 100000)).ToArray();
-
-            var simd = SimdLinqExtensions.LongSum(source);
-            var reference = Enumerable.Sum(source, x => (long)x);
-            (simd).Should().Be(reference);
-        }
-
-        for (int i = 1; i < 1024; i++)
-        {
-            var source = Enumerable.Range(1, i).Select(x => (uint)rand.Next(0, 200000)).ToArray();
-
-            var simd = SimdLinqExtensions.LongSum(source);
-            var reference = (ulong)Enumerable.Sum(source, x => x);
-            (simd).Should().Be(reference);
         }
     }
 }

@@ -5,7 +5,36 @@
 <#@ import namespace="System.Collections.Generic" #>
 <#@ output extension=".cs" #>
 <#
-    var signature = "public static unsafe bool Contains";
+    string summary(string x, bool nullable)
+    {
+        var remark = "";
+        if(x is "double" or "float")
+        {
+            remark += """
+
+                /// <remarks>This method does not check for <see cref="float.NaN"/> <see cref="float"/>/<see cref="double"/> values and should not be used when <paramref name="source"/> may contain one.</remarks>
+            """;
+        }
+        var exception = "";
+        if (nullable)
+        {
+            exception += """
+
+               /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
+           """;
+        }
+
+        return $"""
+        /// <summary>
+            /// Determines whether a sequence of <see cref="{x}"/> contains a specified element using SIMD acceleration.
+            /// </summary>{remark}
+            /// <param name="source">A sequence of <see cref="{x}"/> values in which to locate a value.</param>
+            /// <param name="value">The value to locate in the sequence.</param>
+            /// <returns><see langword="true"/> if the source sequence contains an element that has the specified value; otherwise, <see langword="false"/>.</returns>{exception}
+            /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
+        """;
+    }
+    
     var types = new []
     {
         "byte", "sbyte", "short", "ushort", "int", "uint", "long", "ulong", "float", "double"
@@ -14,45 +43,44 @@
 namespace SimdLinq;
 
 using System.Runtime.InteropServices;
-using System.Runtime.Intrinsics;
 
 public static partial class SimdLinqExtensions
 {
 <# foreach(var type in types) { #>
-    /// <summary>Compute Contains in SIMD.</summary>
-    <#= signature #>(this <#= type #>[] source, <#= type #> value)
+    <#= summary(type, true) #>
+    public static bool Contains(this <#= type #>[] source, <#= type #> value)
     {
         ArgumentNullException.ThrowIfNull(source);
         return ContainsCore(new ReadOnlySpan<<#= type #>>(source), value);
     }
 
-    /// <summary>Compute Contains in SIMD.</summary>
-    <#= signature #>(this List<<#= type #>> source, <#= type #> value)
+    <#= summary(type, true) #>
+    public static bool Contains(this List<<#= type #>> source, <#= type #> value)
     {
         ArgumentNullException.ThrowIfNull(source);
         return ContainsCore((ReadOnlySpan<<#= type #>>)CollectionsMarshal.AsSpan(source), value);
     }
 
-    /// <summary>Compute Contains in SIMD.</summary>
-    <#= signature #>(this Memory<<#= type #>> source, <#= type #> value)
+    <#= summary(type, true) #>
+    public static bool Contains(this Memory<<#= type #>> source, <#= type #> value)
     {
         return ContainsCore((ReadOnlySpan<<#= type #>>)source.Span, value);
     }
 
-    /// <summary>Compute Contains in SIMD.</summary>
-    <#= signature #>(this ReadOnlyMemory<<#= type #>> source, <#= type #> value)
+    <#= summary(type, true) #>
+    public static bool Contains(this ReadOnlyMemory<<#= type #>> source, <#= type #> value)
     {
         return ContainsCore(source.Span, value);
     }
 
-    /// <summary>Compute Contains in SIMD.</summary>
-    <#= signature #>(this Span<<#= type #>> source, <#= type #> value)
+    <#= summary(type, true) #>
+    public static bool Contains(this Span<<#= type #>> source, <#= type #> value)
     {
         return ContainsCore((ReadOnlySpan<<#= type #>>)source, value);
     }
 
-    /// <summary>Compute Contains in SIMD.</summary>
-    <#= signature #>(this ReadOnlySpan<<#= type #>> source, <#= type #> value)
+    <#= summary(type, true) #>
+    public static bool Contains(this ReadOnlySpan<<#= type #>> source, <#= type #> value)
     {
         return ContainsCore(source, value);
     }

@@ -15,6 +15,22 @@
     </ItemGroup>
     
     <ItemGroup>
+        <None Update="SimdLinqExtensions.LongSum.tt">
+          <LastGenOutput>SimdLinqExtensions.LongSum.cs</LastGenOutput>
+          <Generator>TextTemplatingFileGenerator</Generator>
+        </None>
+        <None Update="SimdLinqExtensions.Max.tt">
+          <LastGenOutput>SimdLinqExtensions.Max.cs</LastGenOutput>
+          <Generator>TextTemplatingFileGenerator</Generator>
+        </None>
+        <None Update="SimdLinqExtensions.Min.tt">
+          <LastGenOutput>SimdLinqExtensions.Min.cs</LastGenOutput>
+          <Generator>TextTemplatingFileGenerator</Generator>
+        </None>
+        <None Update="SimdLinqExtensions.Sum.tt">
+          <LastGenOutput>SimdLinqExtensions.Sum.cs</LastGenOutput>
+          <Generator>TextTemplatingFileGenerator</Generator>
+        </None>
         <None Update="SimdLinqExtensions.Contains.tt">
           <LastGenOutput>SimdLinqExtensions.Contains.cs</LastGenOutput>
           <Generator>TextTemplatingFileGenerator</Generator>
@@ -27,9 +43,9 @@
           <Generator>TextTemplatingFileGenerator</Generator>
           <LastGenOutput>SimdLinqExtensions.MinMax.cs</LastGenOutput>
         </None>
-        <None Update="SimdLinqExtensions.SumAverage.tt">
+        <None Update="SimdLinqExtensions.Average.tt">
             <Generator>TextTemplatingFileGenerator</Generator>
-            <LastGenOutput>SimdLinqExtensions.SumAverage.cs</LastGenOutput>
+            <LastGenOutput>SimdLinqExtensions.Average.cs</LastGenOutput>
         </None>
     </ItemGroup>
 
@@ -38,6 +54,26 @@
     </ItemGroup>
 
     <ItemGroup>
+        <Compile Update="SimdLinqExtensions.LongSum.cs">
+          <DependentUpon>SimdLinqExtensions.LongSum.tt</DependentUpon>
+          <DesignTime>True</DesignTime>
+          <AutoGen>True</AutoGen>
+        </Compile>
+        <Compile Update="SimdLinqExtensions.Max.cs">
+          <DependentUpon>SimdLinqExtensions.Max.tt</DependentUpon>
+          <DesignTime>True</DesignTime>
+          <AutoGen>True</AutoGen>
+        </Compile>
+        <Compile Update="SimdLinqExtensions.Min.cs">
+          <DependentUpon>SimdLinqExtensions.Min.tt</DependentUpon>
+          <DesignTime>True</DesignTime>
+          <AutoGen>True</AutoGen>
+        </Compile>
+        <Compile Update="SimdLinqExtensions.Sum.cs">
+          <DependentUpon>SimdLinqExtensions.Sum.tt</DependentUpon>
+          <DesignTime>True</DesignTime>
+          <AutoGen>True</AutoGen>
+        </Compile>
         <Compile Update="SimdLinqExtensions.Contains.cs">
           <DependentUpon>SimdLinqExtensions.Contains.tt</DependentUpon>
           <DesignTime>True</DesignTime>
@@ -53,10 +89,10 @@
           <AutoGen>True</AutoGen>
           <DependentUpon>SimdLinqExtensions.MinMax.tt</DependentUpon>
         </Compile>
-        <Compile Update="SimdLinqExtensions.SumAverage.cs">
+        <Compile Update="SimdLinqExtensions.Average.cs">
           <DesignTime>True</DesignTime>
           <AutoGen>True</AutoGen>
-          <DependentUpon>SimdLinqExtensions.SumAverage.tt</DependentUpon>
+          <DependentUpon>SimdLinqExtensions.Average.tt</DependentUpon>
         </Compile>
     </ItemGroup>
 

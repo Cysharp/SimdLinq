@@ -1,13 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SimdLinq.Tests;
 
 public class MinMaxTest
 {
+    [Fact]
+    public void MinHandlesNull()
+    {
+        // Arrange
+        int[]? arr = null;
+
+        // Act Assert
+        Assert.Throws<ArgumentNullException>(() => arr!.Min());
+    }
+
+    [Fact]
+    public void MinHandlesEmpty()
+    {
+        // Arrange
+        var arr = Array.Empty<int>();
+
+        // Act Assert
+        Assert.ThrowsAny<InvalidOperationException>(() => arr!.Min());
+    }
+
     [Fact]
     public void Min()
     {
@@ -31,6 +48,26 @@ public class MinMaxTest
     }
 
     [Fact]
+    public void MaxHandlesNull()
+    {
+        // Arrange
+        int[]? arr = null;
+
+        // Act Assert
+        Assert.Throws<ArgumentNullException>(() => arr!.Max());
+    }
+
+    [Fact]
+    public void MaxHandlesEmpty()
+    {
+        // Arrange
+        var arr = Array.Empty<int>();
+
+        // Act Assert
+        Assert.ThrowsAny<InvalidOperationException>(() => arr!.Max());
+    }
+
+    [Fact]
     public void Max()
     {
         MaxTest(r => r.Next(), SimdLinqExtensions.Max);
@@ -50,6 +87,26 @@ public class MinMaxTest
                 simd.Should().Be(reference);
             }
         }
+    }
+
+    [Fact]
+    public void MinMaxHandlesNull()
+    {
+        // Arrange
+        int[]? arr = null;
+
+        // Act Assert
+        Assert.Throws<ArgumentNullException>(() => arr!.MinMax());
+    }
+
+    [Fact]
+    public void MinMaxHandlesEmpty()
+    {
+        // Arrange
+        var arr = Array.Empty<int>();
+
+        // Act Assert
+        Assert.ThrowsAny<InvalidOperationException>(() => arr!.MinMax());
     }
 
     [Fact]

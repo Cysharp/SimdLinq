@@ -6,6 +6,26 @@ namespace SimdLinq.Tests;
 public class AverageTest
 {
     [Fact]
+    public void AverageHandlesNull()
+    {
+        // Arrange
+        int[]? arr = null;
+
+        // Act Assert
+        Assert.Throws<ArgumentNullException>(() => arr!.Average());
+    }
+
+    [Fact]
+    public void AverageHandlesEmpty()
+    {
+        // Arrange
+        var arr = Array.Empty<int>();
+
+        // Act Assert
+        Assert.ThrowsAny<InvalidOperationException>(() => arr.Average());
+    }
+
+    [Fact]
     public void Average()
     {
         AverageTest(x => x.Next(-100000, 100000), Enumerable.Average, SimdLinqExtensions.Average);

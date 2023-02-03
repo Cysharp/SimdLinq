@@ -26,17 +26,17 @@
 
         return $"""
         /// <summary>
-            /// Returns the minimum and maximum values in a sequence of <see cref="{x}"/> values using SIMD acceleration.
+            /// Returns the maximum value in a sequence of <see cref="{x}"/> values using SIMD acceleration.
             /// </summary>{remark}
-            /// <param name="source">A sequence of <see cref="{x}"/> values to determine the minimum and maximum value of.</param>
-            /// <returns>A tuple of the minimum and maximum values in the sequence.</returns>{exception}
+            /// <param name="source">A sequence of <see cref="{x}"/> values to determine the maximum value of.</param>
+            /// <returns>The maximum value in the sequence.</returns>{exception}
             /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
         """;
     }
 
-    var retType = (string x) => $"({x} Min, {x} Max)";
+    var retType = (string x) => x;
    
-    var methodName = "MinMax";
+    var methodName = "Max";
     var types = new []
     {
         "byte", "sbyte", "short", "ushort", "int", "uint", "long", "ulong", "float", "double"

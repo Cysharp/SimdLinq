@@ -12,7 +12,7 @@
         {
             remark += """
 
-                /// <remarks>This method does not check for <see cref="float.NaN"/> <see cref="float"/>/<see cref="double"/> values and should not be used when <paramref name="source"/> may contain one.</remarks>
+                /// <para>Unlike Linq, the order for the sum calculation is not sequential, leading to slight differences in floating-point operations and the resulting value. While this difference is minimal you should not use this method if you require the same result as Linq.Average.</para>
             """;
         }
         var exception = "";
@@ -26,20 +26,20 @@
 
         return $"""
         /// <summary>
-            /// Returns the minimum and maximum values in a sequence of <see cref="{x}"/> values using SIMD acceleration.
+            /// Computes the average of a sequence of <see cref="{x}"/> values using SIMD acceleration.
             /// </summary>{remark}
-            /// <param name="source">A sequence of <see cref="{x}"/> values to determine the minimum and maximum value of.</param>
-            /// <returns>A tuple of the minimum and maximum values in the sequence.</returns>{exception}
+            /// <param name="source">A collection of <see cref="{x}"/> values to calculate the average of.</param>
+            /// <returns>The average of the collection of values.</returns>{exception}
             /// <exception cref="InvalidOperationException"><paramref name="source"/> contains no elements.</exception>
         """;
     }
 
-    var retType = (string x) => $"({x} Min, {x} Max)";
-   
-    var methodName = "MinMax";
+    var retType = (string x) => x is "double" or "float" ? x : "double";
+
+    var methodName = "Average";
     var types = new []
     {
-        "byte", "sbyte", "short", "ushort", "int", "uint", "long", "ulong", "float", "double"
+        "int", "long", "double", "float", "uint", "ulong"
     };
 #>
 namespace SimdLinq;
