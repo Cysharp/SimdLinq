@@ -64,7 +64,7 @@ Unlike LINQ, SimdLinq does not check for NaN in float/double Min/Max calculation
 
 Supported collections
 ---
-`T[]`, `List<T>`, `Span<T>`, `ReadOnlySpan<T>`, `Memory<T>`, `ReadOnlyMemory<T>`, `Span<T>`, `ReadOnlySpan<T>`.
+`T[]`, `List<T>`, `Span<T>`, `Memory<T>`, `ReadOnlyMemory<T>`, `Span<T>`, `ReadOnlySpan<T>`.
 
 Supported methods
 ---
