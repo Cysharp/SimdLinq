@@ -34,11 +34,11 @@ public static partial class SimdLinqExtensions
             ref var to = ref Unsafe.Add(ref current, source.Length - Vector128<T>.Count);
 
             var vectorMin = Vector128.LoadUnsafe(ref current);
-            current = ref Unsafe.Add(ref current, Vector256<T>.Count);
+            current = ref Unsafe.Add(ref current, Vector128<T>.Count);
             while (Unsafe.IsAddressLessThan(ref current, ref to))
             {
                 vectorMin = Vector128.Min(vectorMin, Vector128.LoadUnsafe(ref current));
-                current = ref Unsafe.Add(ref current, Vector256<T>.Count);
+                current = ref Unsafe.Add(ref current, Vector128<T>.Count);
             }
             vectorMin = Vector128.Min(vectorMin, Vector128.LoadUnsafe(ref to));
 
@@ -104,11 +104,11 @@ public static partial class SimdLinqExtensions
             ref var to = ref Unsafe.Add(ref current, source.Length - Vector128<T>.Count);
 
             var vectorMax = Vector128.LoadUnsafe(ref current);
-            current = ref Unsafe.Add(ref current, Vector256<T>.Count);
+            current = ref Unsafe.Add(ref current, Vector128<T>.Count);
             while (Unsafe.IsAddressLessThan(ref current, ref to))
             {
                 vectorMax = Vector128.Max(vectorMax, Vector128.LoadUnsafe(ref current));
-                current = ref Unsafe.Add(ref current, Vector256<T>.Count);
+                current = ref Unsafe.Add(ref current, Vector128<T>.Count);
             }
             vectorMax = Vector128.Max(vectorMax, Vector128.LoadUnsafe(ref to));
 
@@ -180,12 +180,12 @@ public static partial class SimdLinqExtensions
 
             var vectorMin = Vector128.LoadUnsafe(ref current);
             var vectorMax = vectorMin;
-            current = ref Unsafe.Add(ref current, Vector256<T>.Count);
+            current = ref Unsafe.Add(ref current, Vector128<T>.Count);
             while (Unsafe.IsAddressLessThan(ref current, ref to))
             {
                 vectorMin = Vector128.Min(vectorMin, Vector128.LoadUnsafe(ref current));
                 vectorMax = Vector128.Max(vectorMax, Vector128.LoadUnsafe(ref current));
-                current = ref Unsafe.Add(ref current, Vector256<T>.Count);
+                current = ref Unsafe.Add(ref current, Vector128<T>.Count);
             }
             vectorMin = Vector128.Min(vectorMin, Vector128.LoadUnsafe(ref to));
             vectorMax = Vector128.Max(vectorMax, Vector128.LoadUnsafe(ref to));
