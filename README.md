@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> [ZLinq](https://github.com/Cysharp/ZLinq)), a new zero allocation LINQ library, includes LINQ to SIMD capabilities, it now contains all SimdLinq features. Please migrate to ZLinq.
+
 # SimdLinq
 [![GitHub Actions](https://github.com/Cysharp/SimdLinq/workflows/Build-Debug/badge.svg)](https://github.com/Cysharp/SimdLinq/actions) [![Releases](https://img.shields.io/github/release/Cysharp/SimdLinq.svg)](https://github.com/Cysharp/SimdLinq/releases)
 
